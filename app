@@ -1,0 +1,1 @@
+nodemon node_modules/json-server/bin db.js --port 7000
