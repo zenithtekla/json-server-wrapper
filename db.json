@@ -1,0 +1,184 @@
+{
+    "headers": {
+        "Accept": "application/json, text/plain, */*",
+        "token": "AQIC5wM2LY4SfcxgJlbzdqId154xIqeSMyrJ0RrxgZuo6ag.*AAJTSQACMDIAAlNLABQtMTIwNjMzNDgzMjc3MDc4MzQ3NgACUzEAAjAx*"
+    },
+    "logon": {
+        "apiErrorModel": null,
+        "success": true,
+        "apiVersion": "0.9.10",
+        "hasNotification": true,
+        "defaultUserAppTypeId": 1,
+        "defaultUserLibTypeId": 1,
+        "userId": "775b44ae-d59d-414c-82fe-a907debf6874",
+        "name": "zetekla2",
+        "session": {
+            "token": "AQIC5wM2LY4SfczBEfYBdZ8vIW6lqWsx9YWpRjw5ABR1qc8.*AAJTSQACMDIAAlNLABM1OTg1Mjk5Nzc0NDg3OTkyNjc4AAJTMQACMDE.*",
+            "expiresIn": 60
+        }
+    },
+    "fruits": [
+        "cam",
+        "buoi",
+        "xoai",
+        "apple"
+    ],
+    "getAllLibs": {
+        "getAllLibs": {
+            "apiErrorModel": null,
+            "success": true,
+            "libsList": [
+                {
+                    "id": 1,
+                    "name": "SmartPortal",
+                    "provider": "Johnson team"
+                },
+                {
+                    "id": 2,
+                    "name": "ReactJS-Redux-ReactNative",
+                    "provider": "Facebook team"
+                },
+                {
+                    "id": 3,
+                    "name": "Angular2-Ionic2-Cordova",
+                    "provider": "Google team"
+                },
+                {
+                    "id": 4,
+                    "name": "Xamarin",
+                    "provider": "Microsoft cross-platform appDev team"
+                }
+            ]
+        }
+    },
+    "users": [
+        "Pristine",
+        "Phuc",
+        "Kallio",
+        "Tran",
+        {
+            "id": 0,
+            "name": "user0"
+        },
+        {
+            "id": 1,
+            "name": "user1"
+        },
+        {
+            "id": 2,
+            "name": "user2"
+        },
+        {
+            "id": 3,
+            "name": "user3"
+        },
+        {
+            "id": 4,
+            "name": "user4"
+        },
+        {
+            "id": 5,
+            "name": "user5"
+        },
+        {
+            "id": 6,
+            "name": "user6"
+        },
+        {
+            "id": 7,
+            "name": "user7"
+        },
+        {
+            "id": 8,
+            "name": "user8"
+        },
+        {
+            "id": 9,
+            "name": "user9"
+        },
+        {
+            "id": 10,
+            "name": "user10"
+        },
+        {
+            "id": 11,
+            "name": "user11"
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "title": "json-server",
+            "author": "typicode"
+        }
+    ],
+    "dairy": [
+        "milk",
+        "egg",
+        "tomatoes",
+        " zyxx",
+        "tom"
+    ],
+    "customers": [
+        {
+            "id": 0,
+            "first_name": "Rebeca",
+            "last_name": "Edwin",
+            "phone": "800-419-5132"
+        },
+        {
+            "id": 1,
+            "first_name": "Eric",
+            "last_name": "Nakia",
+            "phone": "724-955-2355"
+        },
+        {
+            "id": 2,
+            "first_name": "Ubaldo",
+            "last_name": "Torey",
+            "phone": "190-307-1390"
+        },
+        {
+            "id": 3,
+            "first_name": "Colten",
+            "last_name": "Rita",
+            "phone": "129-606-5931"
+        },
+        {
+            "id": 4,
+            "first_name": "Mertie",
+            "last_name": "Karina",
+            "phone": "253-551-6201"
+        },
+        {
+            "id": 5,
+            "first_name": "Chet",
+            "last_name": "Deja",
+            "phone": "857-464-0009"
+        },
+        {
+            "id": 6,
+            "first_name": "Patsy",
+            "last_name": "Jessie",
+            "phone": "214-005-5632"
+        },
+        {
+            "id": 7,
+            "first_name": "Granville",
+            "last_name": "Caterina",
+            "phone": "178-383-1057"
+        },
+        {
+            "id": 8,
+            "first_name": "Cameron",
+            "last_name": "Lucile",
+            "phone": "234-774-6312"
+        },
+        {
+            "id": 9,
+            "first_name": "Jolie",
+            "last_name": "Macey",
+            "phone": "555-593-0588"
+        }
+    ]
+}

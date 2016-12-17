@@ -1,10 +1,18 @@
 // server.js
-var jsonServer = require('json-server')
-var db_file = 'db.js'
-var server = jsonServer.create()
-var router = jsonServer.router(db_file)
+var port = 7001
 
-server.use(jsonServer.defaults)
+var jsonServer 	= require('json-server')
+
+require('./db');
+
+var server 			= jsonServer.create()
+var router 			= jsonServer.router('db.json')
+var middlewares = jsonServer.defaults()
+
+server.use(middlewares)
 server.use(router)
 
-server.listen(7000);
+
+server.listen(port, function () {
+  console.log('JSON Server is running on port', port)
+});

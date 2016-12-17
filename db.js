@@ -1,5 +1,6 @@
 module.exports = function() {
-
+  var utils = require('./config/assets/utils')
+  var faker = require('faker')
 
   var headers = {
     Accept: "application/json, text/plain, */*",
@@ -22,22 +23,41 @@ module.exports = function() {
   };
 
   var data = {
-    headers: headers,
-    logon: logon,
-    fruits: require('./food.json').fruits,
-    getAllLibs: require('./appstore/Libraries/getAllLibs'),
-    users: ['Pristine', 'Phuc', 'Kallio', 'Tran'],
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+      headers: headers,
+      logon: logon,
+      fruits: require('./food.json').fruits,
+      getAllLibs: require('./appstore/Libraries/getAllLibs'),
+      users: ['Pristine', 'Phuc', 'Kallio', 'Tran'],
+      "posts": [
+        { "id": 1, "title": "json-server", "author": "typicode" }
+      ],
+      "dairy": ['milk', 'egg', 'tomatoes',' zyxx', 'tom'],
+      customers: generateCustomers()
   };
-  // Create 1000 users
-  for (var i = 0; i < 200; i++) {
+
+  // programmatically reate 12 users
+  for (var i = 0; i < 12; i++) {
       data.users.push({ id: i, name: 'user' + i })
   }
-  return data;
+
+  function generateCustomers () {
+    var customers = []
+
+    for (var id = 0; id < 10; id++) {
+      var firstName   = faker.name.firstName()
+      var lastName    = faker.name.firstName()
+      var phoneNumber = faker.phone.phoneNumberFormat()
+
+      customers.push({
+        "id": id,
+        "first_name": firstName,
+        "last_name": lastName,
+        "phone": phoneNumber
+      })
+    }
+
+    return customers;
+  }
+
+  return utils.overwriteJSON(data, './db.json');
 };
