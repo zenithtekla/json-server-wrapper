@@ -14,7 +14,8 @@
     "npm": ">=2.0.0"
   },
   "scripts": {
-    "start": "json-server -w db.json --port 7000 && gulp watch_src",
+    "start": "gulp",
+    "start:manually": "json-server -w db.json --port 7000 && gulp watch_src",
     "watch:js": "watch 'npm run build:json' db.js",
     "build:json": "node db.js"
   },

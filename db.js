@@ -1,6 +1,7 @@
+var faker = require('faker')
+
 module.exports = function() {
   var utils = require('./config/assets/utils')
-  var faker = require('faker')
 
   var headers = {
     Accept: "application/json, text/plain, */*",
@@ -31,7 +32,6 @@ module.exports = function() {
       "posts": [
         { "id": 1, "title": "json-server", "author": "typicode" }
       ],
-      "dairy": ['milk', 'egg', 'tomatoes',' zyxx', 'tom'],
       customers: generateCustomers()
   };
 
@@ -40,24 +40,25 @@ module.exports = function() {
       data.users.push({ id: i, name: 'user' + i })
   }
 
-  function generateCustomers () {
-    var customers = []
-
-    for (var id = 0; id < 10; id++) {
-      var firstName   = faker.name.firstName()
-      var lastName    = faker.name.firstName()
-      var phoneNumber = faker.phone.phoneNumberFormat()
-
-      customers.push({
-        "id": id,
-        "first_name": firstName,
-        "last_name": lastName,
-        "phone": phoneNumber
-      })
-    }
-
-    return customers;
-  }
-
   return utils.overwriteJSON(data, './db.json');
 };
+
+
+function generateCustomers () {
+  var customers = []
+
+  for (var id = 0; id < 5; id++) {
+    var firstName   = faker.name.firstName()
+    var lastName    = faker.name.firstName()
+    var phoneNumber = faker.phone.phoneNumberFormat()
+
+    customers.push({
+      "id": id,
+      "first_name": firstName,
+      "last_name": lastName,
+      "phone": phoneNumber
+    })
+  }
+
+  return customers;
+}

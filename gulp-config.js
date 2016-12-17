@@ -5,12 +5,6 @@ var gulpConfig = function() {
   	db_file: db_file,
     db_scripts:{
       src: [db_file]
-    },
-    nodemonOptions: {
-      script: 'server.js',
-      delayTime: 50,
-      // socket may be optional
-      watch: ['db.js', 'server.js']
     }
   }
 };

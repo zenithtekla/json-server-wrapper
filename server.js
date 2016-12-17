@@ -3,8 +3,6 @@ var port = 7001
 
 var jsonServer 	= require('json-server')
 
-require('./db');
-
 var server 			= jsonServer.create()
 var router 			= jsonServer.router('db.json')
 var middlewares = jsonServer.defaults()

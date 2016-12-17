@@ -112,73 +112,36 @@
             "author": "typicode"
         }
     ],
-    "dairy": [
-        "milk",
-        "egg",
-        "tomatoes",
-        " zyxx",
-        "tom"
-    ],
     "customers": [
         {
             "id": 0,
-            "first_name": "Rebeca",
-            "last_name": "Edwin",
-            "phone": "800-419-5132"
+            "first_name": "Tremayne",
+            "last_name": "Daija",
+            "phone": "549-129-0461"
         },
         {
             "id": 1,
-            "first_name": "Eric",
-            "last_name": "Nakia",
-            "phone": "724-955-2355"
+            "first_name": "Sidney",
+            "last_name": "Jude",
+            "phone": "026-893-4562"
         },
         {
             "id": 2,
-            "first_name": "Ubaldo",
-            "last_name": "Torey",
-            "phone": "190-307-1390"
+            "first_name": "Cleta",
+            "last_name": "Dawson",
+            "phone": "144-618-3499"
         },
         {
             "id": 3,
-            "first_name": "Colten",
-            "last_name": "Rita",
-            "phone": "129-606-5931"
+            "first_name": "Orin",
+            "last_name": "Bernice",
+            "phone": "813-993-8623"
         },
         {
             "id": 4,
-            "first_name": "Mertie",
-            "last_name": "Karina",
-            "phone": "253-551-6201"
-        },
-        {
-            "id": 5,
-            "first_name": "Chet",
-            "last_name": "Deja",
-            "phone": "857-464-0009"
-        },
-        {
-            "id": 6,
-            "first_name": "Patsy",
-            "last_name": "Jessie",
-            "phone": "214-005-5632"
-        },
-        {
-            "id": 7,
-            "first_name": "Granville",
-            "last_name": "Caterina",
-            "phone": "178-383-1057"
-        },
-        {
-            "id": 8,
-            "first_name": "Cameron",
-            "last_name": "Lucile",
-            "phone": "234-774-6312"
-        },
-        {
-            "id": 9,
-            "first_name": "Jolie",
-            "last_name": "Macey",
-            "phone": "555-593-0588"
+            "first_name": "Quentin",
+            "last_name": "Mazie",
+            "phone": "749-381-9392"
         }
     ]
 }
