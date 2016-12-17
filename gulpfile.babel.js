@@ -1,3 +1,5 @@
+'use strict';
+
 import gulp             from 'gulp';
 import config           from './gulp-config';
 import buildJSON        from './db'; // loading db.js

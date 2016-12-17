@@ -28,7 +28,7 @@ module.exports = function() {
       logon: logon,
       fruits: require('./food.json').fruits,
       getAllLibs: require('./appstore/Libraries/getAllLibs'),
-      users: ['Pristine', 'Phuc', 'Kallio', 'Tran', 'Aubrey'],
+      users: ['Pristine', 'Phuc', 'Kallio', 'Tran'],
       "posts": [
         { "id": 1, "title": "json-server", "author": "typicode" }
       ],

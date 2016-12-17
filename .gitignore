@@ -39,6 +39,7 @@ npm-debug.log*
 *.swp
 pids
 *.seed
+db_log/
 logs/
 build/
 
