@@ -1,5 +1,5 @@
 // server.js
-var port = 7001
+var port = 7000
 
 var jsonServer 	= require('json-server')
 

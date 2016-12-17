@@ -5,10 +5,10 @@ import buildJSON        from './db'; // loading db.js
 import shell            from 'gulp-shell';
 import nodemon          from 'gulp-nodemon';
 
-gulp.task('default', ['build_json', 'nodemon']);
+gulp.task('default', ['build:json', 'nodemon']);
 
 
-gulp.task('build_json', function(){
+gulp.task('build:json', function(){
 	return buildJSON();
 	// return shell.task(['json-server -w db.json --port 7000']);
 });
@@ -22,7 +22,7 @@ gulp.task('nodemon', function (cb) {
       ignore: ['node_modules/'],
       // socket may be optional
       watch: ['db.js', 'server.js'],
-      tasks: ['build_json']
+      tasks: ['build:json']
     })
     .on('start', function () {
       if (!started) {
@@ -41,8 +41,8 @@ gulp.task('nodemon', function (cb) {
 UNUSED
 */
 
-gulp.task('watch_src', function(){
-  return gulp.watch(config.db_scripts.src, ['build_json']);
+gulp.task('watch:src', function(){
+  return gulp.watch(config.db_scripts.src, ['build:json']);
 });
 
 // gulp.task('shell', ['watch_src'], shell.task(['json-server -w db.json --port 7000']));

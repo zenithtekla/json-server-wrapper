@@ -28,7 +28,7 @@ module.exports = function() {
       logon: logon,
       fruits: require('./food.json').fruits,
       getAllLibs: require('./appstore/Libraries/getAllLibs'),
-      users: ['Pristine', 'Phuc', 'Kallio', 'Tran'],
+      users: ['Pristine', 'Phuc', 'Kallio', 'Tran', 'Aubrey'],
       "posts": [
         { "id": 1, "title": "json-server", "author": "typicode" }
       ],
@@ -39,6 +39,10 @@ module.exports = function() {
   for (var i = 0; i < 12; i++) {
       data.users.push({ id: i, name: 'user' + i })
   }
+
+  var moment          = require('moment')
+  var bundleHash      = moment().format('YYYY-MM-DD-HH-mm-ss')
+  utils.exportJSON(data,'./db_log/'+bundleHash+'-db.json')
 
   return utils.overwriteJSON(data, './db.json');
 };
