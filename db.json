@@ -56,8 +56,8 @@
         "Phuc",
         "Kallio",
         "Tran",
-        "Aubrey",
-        "Khan",
+        "Aubreys",
+        "Sammy",
         {
             "id": 0,
             "name": "user0"
@@ -126,39 +126,39 @@
         {
             "id": 2,
             "title": "fake",
-            "author": "IDK"
+            "author": "I dont know"
         }
     ],
     "customers": [
         {
             "id": 0,
-            "first_name": "Hester",
-            "last_name": "Maryam",
-            "phone": "545-758-6761"
+            "first_name": "Morgan",
+            "last_name": "Verdie",
+            "phone": "302-604-3829"
         },
         {
             "id": 1,
-            "first_name": "Owen",
-            "last_name": "Xander",
-            "phone": "446-886-9996"
+            "first_name": "Nathanael",
+            "last_name": "Jackeline",
+            "phone": "216-292-6483"
         },
         {
             "id": 2,
-            "first_name": "Norma",
-            "last_name": "Carey",
-            "phone": "924-114-2005"
+            "first_name": "Jovanny",
+            "last_name": "Treva",
+            "phone": "176-755-4516"
         },
         {
             "id": 3,
-            "first_name": "Guadalupe",
-            "last_name": "Eugene",
-            "phone": "213-707-1994"
+            "first_name": "Cheyenne",
+            "last_name": "Rubie",
+            "phone": "236-917-6170"
         },
         {
             "id": 4,
-            "first_name": "Kavon",
-            "last_name": "Regan",
-            "phone": "501-165-5968"
+            "first_name": "Gregoria",
+            "last_name": "Matilda",
+            "phone": "805-014-0921"
         }
     ]
 }

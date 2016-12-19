@@ -23,37 +23,21 @@ import moment           from 'moment';
 let bundleHash = moment().format('YYYY-MM-DD-HH-mm-ss')
 let i = 0
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['shell', 'watch']);
 
-gulp.task('serve', function (callback) {
-  runSequence('build:json', 'log:json', 'watch:src', 'watch:json', 'shell', callback);
-});
+gulp.task('serve', ['build:json', 'log:json', 'shell', 'watch:js', 'watch:json']);
 
-gulp.task('watch', ['watch:src', 'watch:json'])
+gulp.task('watch', ['watch:js', 'watch:json'])
 
 gulp.task('watch:json', function(done){
   return gulp.watch([config.db_json], ['log:json']);
 });
 
-gulp.task('copy', function(done){
-  gulp.src('./db_log/db.js', {read:false}).pipe(clean());
-
-  return gulp.src(config.db_scripts.src)
-      .pipe(gulp.dest('./db_log/'));
-});
-
-gulp.task('build:new', function(done){
-  return require('./db_log/db.js')(bundleHash);
-});
-
-gulp.task('watch:src', function(done){
-  return gulp.watch(config.db_scripts.src, ['copy'], function(done){
-    return require('./db_log/db')(bundleHash);
-  });
-});
-
 gulp.task('watch:js', function(){
-  return gulp.watch(config.db_scripts.src, ['build:json']);
+  return gulp.watch(config.db_scripts.src, function(done){
+    bundleHash = moment().format('YYYY-MM-DD-HH-mm-ss');
+    return buildJSON(bundleHash);
+  });
 });
 
 /*gulp.watch('path to watch', function(event){
@@ -62,17 +46,17 @@ gulp.task('watch:js', function(){
   }
 };*/
 
+// gulp.task('shell', ['build:json', 'log:json'], shell.task(['json-server -w db.json --port 7000']));
+// gulp.task('shell', ['watch:js'], shell.task(['nodemon node_modules/json-server/bin db.json --port 7000']));
 gulp.task('shell', shell.task(['json-server -w db.json --port 7000']));
-// gulp.task('shell', ['watch_src'], shell.task(['nodemon node_modules/json-server/bin db.json --port 7000']));
 
-gulp.task('dev', function(callback) {
-  runSequence('build:json', 'log:json', 'nodemon', callback);
-});
+/*
+STRATEGY 3: `gulp` default, needs fix
+*/
 
-// clearAll cache
-gulp.task('clear', function (done) {
-  return cache.clearAll(done);
-});
+/*
+STRATEGY 2: `gulp shell` in one cmd, `gulp watch` in the other cmd
+*/
 
 /*
 STRATEGY 1: `gulp nodemon` is enough to kickstart the server
@@ -81,7 +65,7 @@ STRATEGY 1: `gulp nodemon` is enough to kickstart the server
 
 gulp.task('build:json', function(done){
   i++;
-  console.log('execute build:json ', i);
+  console.log(bundleHash, 'execute build:json ', i);
   return buildJSON(bundleHash);
   // return shell.task(['json-server -w db.json --port 7000']);
 });
@@ -128,3 +112,37 @@ gulp.task('nodemon', function (cb) {
       // shell.task(['json-server --watch ${config.db_file} --port 7000']);
     });
 });
+
+
+
+/* UNUSED */
+
+// clearAll cache
+gulp.task('clear', function (done) {
+  return cache.clearAll(done);
+});
+
+gulp.task('copy', function(done){
+  gulp.src('./db_log/db.js', {read:false}).pipe(clean());
+
+  return gulp.src(config.db_scripts.src)
+      .pipe(gulp.dest('./db_log/'));
+});
+
+gulp.task('watch:src', function(done){
+  return gulp.watch(config.db_scripts.src, ['copy'], function(done){
+    return require('./db_log/db')(bundleHash);
+  });
+});
+
+gulp.task('build:new', function(done){
+  return require('./db_log/db.js')(bundleHash);
+});
+
+gulp.task('dev', function(callback) {
+  runSequence('build:json', 'log:json', 'nodemon', callback);
+});
+
+gulp.task('boot', function (callback) {
+  runSequence('build:json', 'log:json', 'watch:js', 'watch:json', 'shell', callback);
+})
