@@ -56,6 +56,7 @@
         "Phuc",
         "Kallio",
         "Tran",
+        "Aubrey",
         {
             "id": 0,
             "name": "user0"
@@ -105,43 +106,58 @@
             "name": "user11"
         }
     ],
+    "movies": [
+        {
+            "id": 1,
+            "title": "spider man"
+        },
+        {
+            "id": 2,
+            "title": "spider man2"
+        }
+    ],
     "posts": [
         {
             "id": 1,
             "title": "json-server",
             "author": "typicode"
+        },
+        {
+            "id": 2,
+            "title": "fake",
+            "author": "IDK"
         }
     ],
     "customers": [
         {
             "id": 0,
-            "first_name": "Pierre",
-            "last_name": "Estell",
-            "phone": "719-604-4375"
+            "first_name": "Mellie",
+            "last_name": "Clarissa",
+            "phone": "610-467-5037"
         },
         {
             "id": 1,
-            "first_name": "Laurine",
-            "last_name": "Issac",
-            "phone": "821-871-6736"
+            "first_name": "Justine",
+            "last_name": "Tara",
+            "phone": "784-241-8605"
         },
         {
             "id": 2,
-            "first_name": "Angelo",
-            "last_name": "Dedric",
-            "phone": "301-580-6541"
+            "first_name": "Cicero",
+            "last_name": "Amir",
+            "phone": "329-347-9260"
         },
         {
             "id": 3,
-            "first_name": "Nils",
-            "last_name": "Noel",
-            "phone": "749-166-2307"
+            "first_name": "Wyatt",
+            "last_name": "Isidro",
+            "phone": "249-600-3403"
         },
         {
             "id": 4,
-            "first_name": "Blanche",
-            "last_name": "Mekhi",
-            "phone": "993-743-3210"
+            "first_name": "Garland",
+            "last_name": "Emmett",
+            "phone": "742-267-0893"
         }
     ]
 }

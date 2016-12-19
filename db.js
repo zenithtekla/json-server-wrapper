@@ -1,6 +1,6 @@
 var faker = require('faker')
 
-module.exports = function() {
+module.exports = function(time) {
   var utils = require('./config/assets/utils')
 
   var headers = {
@@ -24,27 +24,32 @@ module.exports = function() {
   };
 
   var data = {
-      headers: headers,
-      logon: logon,
-      fruits: require('./food.json').fruits,
-      getAllLibs: require('./appstore/Libraries/getAllLibs'),
-      users: ['Pristine', 'Phuc', 'Kallio', 'Tran'],
-      "posts": [
-        { "id": 1, "title": "json-server", "author": "typicode" }
-      ],
-      customers: generateCustomers()
+    headers: headers,
+    logon: logon,
+    fruits: require('./src/json/food.json').fruits,
+    getAllLibs: require('./src/scripts/appstore/Libraries/getAllLibs'),
+    users: ['Pristine', 'Phuc', 'Kallio', 'Tran', 'Aubrey'],
+    movies: [{id:1, title: 'spider man'}, {id:2, title: 'spider man2'}],
+    "posts": [
+      { "id": 1, "title": "json-server", "author": "typicode" },
+      { "id": 2, "title": "fake", "author": "IDK" }
+    ],
+    customers: generateCustomers()
   };
 
-  // programmatically reate 12 users
+  // programmatically create 12 users
   for (var i = 0; i < 12; i++) {
       data.users.push({ id: i, name: 'user' + i })
   }
 
+  /*
   var moment          = require('moment')
   var bundleHash      = moment().format('YYYY-MM-DD-HH-mm-ss')
   utils.exportJSON(data,'./db_log/'+bundleHash+'-db.json')
+  */
+  utils.exportJSON(data, './db.json', time)
 
-  return utils.overwriteJSON(data, './db.json');
+  return null;
 };
 
 
