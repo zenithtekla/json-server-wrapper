@@ -1,6 +1,6 @@
 *INSTRUCTION*
 
-v0.0.3
+v0.0.4
 - `npm install` at first to kickstart the download of app dependencies.
 
 - Gulp orchestrator as a re-prequisite: `npm i -g gulp gulp-cli`

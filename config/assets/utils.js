@@ -1,6 +1,6 @@
 'use strict';
 
-var fs     = require('fs'),
+var fs    = require('fs'),
   path    = require('path'),
   _       = require('lodash'),
   glob    = require('glob');
@@ -75,13 +75,14 @@ var fs     = require('fs'),
   JSONstringify: function(data) {
     return JSON.stringify(data, null, 4);
   },
-  exportJSON: function (data, outputFile) {
+  exportJSON: function (data, outputFile, time) {
+    time = time || '';
     fs.writeFile(outputFile, JSON.stringify(data, null, 4),
       function(err) {
         if(err) {
           console.log('ERROR ', err);
         } else {
-          console.log('JSON saved to ' + outputFile);
+          console.log(time, 'JSON saved to', outputFile);
         }
       }
     );
@@ -175,8 +176,8 @@ utils.deleteFile = function (filePath, callback){
   });
 };
 
-utils.overwriteJSON= function(data, outputFile) {
-  return fs.truncate(outputFile,0, () => utils.exportJSON(data,outputFile));
+utils.overwriteJSON= function(data, outputFile, time) {
+  return fs.writeFile(outputFile,'[]', () => utils.exportJSON(data,outputFile, time));
 }
 
 module.exports = utils;
