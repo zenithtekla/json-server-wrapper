@@ -14,6 +14,6 @@ server.use(middlewares)
 server.use(router)
 
 
-server.listen(port, function () {
+server.listen(config.port, function () {
   console.log(bundleHash, 'JSON Server is running on port', config.port)
 });

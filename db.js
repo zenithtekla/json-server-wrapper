@@ -28,7 +28,7 @@ module.exports = function(time) {
     logon: logon,
     fruits: require('./src/json/food.json').fruits,
     getAllLibs: require('./src/scripts/appstore/Libraries/getAllLibs'),
-    users: ['Pristine', 'Phuc', 'Kallio', 'Tran', 'Aubrey'],
+    users: ['Pristine', 'Phuc', 'Kallio', 'Tran', 'Aubrey', 'Khan'],
     movies: [{id:1, title: 'spider man'}, {id:2, title: 'spider man2'}],
     "posts": [
       { "id": 1, "title": "json-server", "author": "typicode" },
@@ -47,9 +47,7 @@ module.exports = function(time) {
   var bundleHash      = moment().format('YYYY-MM-DD-HH-mm-ss')
   utils.exportJSON(data,'./db_log/'+bundleHash+'-db.json')
   */
-  utils.exportJSON(data, './db.json', time)
-
-  return null;
+  return utils.exportJSON(data, './db.json', time);
 };
 
 

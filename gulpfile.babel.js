@@ -1,6 +1,8 @@
 'use strict';
 
 import gulp             from 'gulp';
+import _                from 'lodash';
+import path             from 'path';
 
 // dependencies
 import config           from './gulp-config';
@@ -27,23 +29,10 @@ gulp.task('serve', function (callback) {
   runSequence('build:json', 'log:json', 'watch:src', 'watch:json', 'shell', callback);
 });
 
-gulp.task('build:json', function(done){
-  i++;
-  console.log('execute build:json ', i);
-  return buildJSON(bundleHash);
-  // return shell.task(['json-server -w db.json --port 7000']);
-});
-
-gulp.task('log:json', function(done){
-  return gulp.src(config.db_json)
-          .pipe(rename({basename: bundleHash+'-db'}))
-          .pipe(gulp.dest('./db_log/'));
-});
-
 gulp.task('watch', ['watch:src', 'watch:json'])
 
 gulp.task('watch:json', function(done){
-  return gulp.watch(['db.json'], ['log:json']);
+  return gulp.watch([config.db_json], ['log:json']);
 });
 
 gulp.task('copy', function(done){
@@ -80,6 +69,30 @@ gulp.task('dev', function(callback) {
   runSequence('build:json', 'log:json', 'nodemon', callback);
 });
 
+// clearAll cache
+gulp.task('clear', function (done) {
+  return cache.clearAll(done);
+});
+
+/*
+STRATEGY 1: `gulp nodemon` is enough to kickstart the server
+  pipe nodemon with inner watch, per watch condition, execute either build:json or log:json
+*/
+
+gulp.task('build:json', function(done){
+  i++;
+  console.log('execute build:json ', i);
+  return buildJSON(bundleHash);
+  // return shell.task(['json-server -w db.json --port 7000']);
+});
+
+gulp.task('log:json', function(done){
+  return gulp.src(config.db_json)
+          .pipe(rename({basename: bundleHash+'-db'}))
+          .pipe(gulp.dest('./db_log/'));
+});
+
+
 gulp.task('nodemon', function (cb) {
   var started = false;
   // Start the server at the beginning of the task
@@ -92,10 +105,13 @@ gulp.task('nodemon', function (cb) {
       // tasks: ['build:json']
       tasks: function(changedFiles){
         var tasks = [];
+        console.log(changedFiles);
         if (!changedFiles) return tasks;
         changedFiles.forEach(function(file){
-          if(file==='db.js' && !~tasks.indexOf('build:json')) tasks.push('build:json')
-          if(file==='db.json' && !~tasks.indexOf('log:json')) tasks.push('log:json')
+          // if(_.includes(file, 'db.js') && !~tasks.indexOf('build:json')) tasks.push('build:json')
+          // if(_.includes(file, 'db.json') && !~tasks.indexOf('log:json')) tasks.push('log:json')
+          if(path.extname(file) === '.js' && !~tasks.indexOf('build:json')) tasks.push('build:json')
+          if(path.extname(file) === '.json' && !~tasks.indexOf('log:json')) tasks.push('log:json')
         })
         return tasks;
       }
@@ -111,9 +127,4 @@ gulp.task('nodemon', function (cb) {
       console.log(bundleHash, 'restarting the json-server');
       // shell.task(['json-server --watch ${config.db_file} --port 7000']);
     });
-});
-
-// clearAll cache
-gulp.task('clear', function (done) {
-  return cache.clearAll(done);
 });
