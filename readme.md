@@ -20,6 +20,7 @@ v0.0.6
 
 - Currently, there are 3 ways to kickstart the json-server:
 
+
 		1) In terminal, write `gulp nodemon`
 
 		2) use the `app` file (similar to `gulp nodemon`). Ensure permissions to execute the app file (`chmod a+x app`, `chmod 777 app`), then execute `./app` or `. app` in the terminal (for Linux|Mac users) and Windows terminal (Git BASH|mintty|cygwin).
@@ -31,7 +32,7 @@ v0.0.6
 
 *INHERITANCE*
 
-- NodeJS fs module and utils methods ( e.g. export JSON) to work with file as did in the [NESA1](https://github.com/zetekla/ng1-nesa-front) and [NESA2](https://github.com/zenithtekla/node-express-sequelize-ng2/commits/nesa2.0.0) repos.
+- NodeJS fs module and utils methods ( e.g. exportJSON) to work with file as did in the [NESA1](https://github.com/zetekla/ng1-nesa-front) and [NESA2](https://github.com/zenithtekla/node-express-sequelize-ng2/commits/nesa2.0.0) repos.
 
 - Gulp tasks.
 

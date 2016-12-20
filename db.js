@@ -32,7 +32,7 @@ module.exports = function(time) {
     movies: [{id:1, title: 'spider man'}, {id:2, title: 'spider man2'}],
     "posts": [
       { "id": 1, "title": "json-server", "author": "typicode" },
-      { "id": 2, "title": "fake", "author": "I dont know" }
+      { "id": 2, "title": "fake", "author": "Matthew Bergman & Marak Squires" }
     ],
     customers: generateCustomers()
   };

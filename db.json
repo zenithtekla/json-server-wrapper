@@ -125,39 +125,39 @@
         {
             "id": 2,
             "title": "fake",
-            "author": "I dont know"
+            "author": "Matthew Bergman & Marak Squires"
         }
     ],
     "customers": [
         {
             "id": 0,
-            "first_name": "Lilliana",
-            "last_name": "Fletcher",
-            "phone": "957-686-5504"
+            "first_name": "Newton",
+            "last_name": "Darion",
+            "phone": "687-188-2605"
         },
         {
             "id": 1,
-            "first_name": "Jannie",
-            "last_name": "Rocio",
-            "phone": "844-103-9111"
+            "first_name": "Megane",
+            "last_name": "Herminio",
+            "phone": "459-607-5423"
         },
         {
             "id": 2,
-            "first_name": "Lindsey",
-            "last_name": "Ramon",
-            "phone": "261-815-7530"
+            "first_name": "Nestor",
+            "last_name": "Angelita",
+            "phone": "464-654-0156"
         },
         {
             "id": 3,
-            "first_name": "Walton",
-            "last_name": "Zella",
-            "phone": "419-482-4604"
+            "first_name": "Justine",
+            "last_name": "Alisha",
+            "phone": "572-968-3916"
         },
         {
             "id": 4,
-            "first_name": "Elaina",
-            "last_name": "Evelyn",
-            "phone": "733-291-5107"
+            "first_name": "Karley",
+            "last_name": "Winston",
+            "phone": "860-877-7850"
         }
     ]
 }
