@@ -28,7 +28,7 @@ module.exports = function(time) {
     logon: logon,
     fruits: require('./src/json/food.json').fruits,
     getAllLibs: require('./src/scripts/appstore/Libraries/getAllLibs'),
-    users: ['Pristine', 'Phuc', 'Kallio', 'Tran', 'Aubreys', 'Sammy'],
+    users: ['Pristine', 'Phuc', 'Kallio', 'Tran', 'Aubrey'],
     movies: [{id:1, title: 'spider man'}, {id:2, title: 'spider man2'}],
     "posts": [
       { "id": 1, "title": "json-server", "author": "typicode" },

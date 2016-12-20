@@ -56,8 +56,7 @@
         "Phuc",
         "Kallio",
         "Tran",
-        "Aubreys",
-        "Sammy",
+        "Aubrey",
         {
             "id": 0,
             "name": "user0"
@@ -132,33 +131,33 @@
     "customers": [
         {
             "id": 0,
-            "first_name": "Morgan",
-            "last_name": "Verdie",
-            "phone": "302-604-3829"
+            "first_name": "Lilliana",
+            "last_name": "Fletcher",
+            "phone": "957-686-5504"
         },
         {
             "id": 1,
-            "first_name": "Nathanael",
-            "last_name": "Jackeline",
-            "phone": "216-292-6483"
+            "first_name": "Jannie",
+            "last_name": "Rocio",
+            "phone": "844-103-9111"
         },
         {
             "id": 2,
-            "first_name": "Jovanny",
-            "last_name": "Treva",
-            "phone": "176-755-4516"
+            "first_name": "Lindsey",
+            "last_name": "Ramon",
+            "phone": "261-815-7530"
         },
         {
             "id": 3,
-            "first_name": "Cheyenne",
-            "last_name": "Rubie",
-            "phone": "236-917-6170"
+            "first_name": "Walton",
+            "last_name": "Zella",
+            "phone": "419-482-4604"
         },
         {
             "id": 4,
-            "first_name": "Gregoria",
-            "last_name": "Matilda",
-            "phone": "805-014-0921"
+            "first_name": "Elaina",
+            "last_name": "Evelyn",
+            "phone": "733-291-5107"
         }
     ]
 }

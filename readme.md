@@ -12,13 +12,19 @@
 
 *INSTRUCTION*
 
-v0.0.5
+v0.0.6
 
 - `npm install` at first to kickstart the download of app dependencies.
 
 - Gulp orchestrator as a pre-requisite: `npm i -g gulp gulp-cli`
 
-- Ensure permissions to execute the app file (`chmod a+x app`, `chmod 777 app`), then execute `./app` or `. app` in the terminal (for Linux|Mac users) and Windows terminal (Git BASH|mintty|cygwin).
+- Currently, there are 3 ways to kickstart the json-server:
+
+		1) In terminal, write `gulp nodemon`
+
+		2) use the `app` file (similar to `gulp nodemon`). Ensure permissions to execute the app file (`chmod a+x app`, `chmod 777 app`), then execute `./app` or `. app` in the terminal (for Linux|Mac users) and Windows terminal (Git BASH|mintty|cygwin).
+
+		3) Manually open 2 cli and run `gulp shell` and `gulp watch` per each.
 
 - make changes to `db.js` file to have more routes. Changes can be made to `db.json` manually.
 - Ensure permissions to write files within NodeJS env so the app can update the `db.json` automatically on changing of `db.js`

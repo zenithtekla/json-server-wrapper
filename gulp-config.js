@@ -7,7 +7,7 @@ var gulpConfig = function() {
   	db_file: db_file,
   	db_json: db_json,
     db_scripts:{
-      src: [db_file]
+      src: [db_file, './src/**/*.+(js|json)']
     }
   }
 };

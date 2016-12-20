@@ -1,14 +1,18 @@
 // server.js
-var moment = require('moment')
+let moment = require('moment')
 bundleHash = moment().format('YYYY-MM-DD-HH-mm-ss')
 
-var config = require('./gulp-config')
+let config = require('./gulp-config')
 
-var jsonServer 	= require('json-server')
+let jsonServer 	= require('json-server')
 
-var server 			= jsonServer.create()
-var router 			= jsonServer.router(config.db_json)
-var middlewares = jsonServer.defaults()
+let server 			= jsonServer.create()
+let router 			= jsonServer.router(config.db_json)
+
+Object.keys(router.db.getState())
+  .forEach((key) => console.log(`/${key}`))
+
+let middlewares = jsonServer.defaults()
 
 server.use(middlewares)
 server.use(router)
