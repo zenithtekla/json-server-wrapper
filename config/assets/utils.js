@@ -1,11 +1,11 @@
 'use strict';
 
-var fs    = require('fs'),
+let fs    = require('fs'),
   path    = require('path'),
   _       = require('lodash'),
   glob    = require('glob');
 
-  var utils = {
+  let utils = {
   getDirectories: function (srcpath) {
     return fs.readdirSync(srcpath).filter(function(file) {
       return fs.statSync(path.join(srcpath, file)).isDirectory();
@@ -37,10 +37,10 @@ var fs    = require('fs'),
   },
   getGlobbedPaths: function (globPatterns, excludes) {
     // URL paths regex
-    var urlRegex = new RegExp('^(?:[a-z]+:)?\/\/', 'i');
+    let urlRegex = new RegExp('^(?:[a-z]+:)?\/\/', 'i');
 
     // The output array
-    var output = [];
+    let output = [];
 
     // If glob pattern is array then we use each pattern in a recursive way, otherwise we use glob
     if (_.isArray(globPatterns)) {
@@ -51,11 +51,11 @@ var fs    = require('fs'),
       if (urlRegex.test(globPatterns)) {
         output.push(globPatterns);
       } else {
-        var files = glob.sync(globPatterns);
+        let files = glob.sync(globPatterns);
         if (excludes) {
           files = files.map(function (file) {
             if (_.isArray(excludes)) {
-              for (var i in excludes) {
+              for (let i in excludes) {
                 if (excludes.hasOwnProperty(i)) {
                   file = file.replace(excludes[i], '');
                 }
@@ -180,7 +180,7 @@ utils.overwriteJSON= function(data, outputFile, time) {
   return fs.writeFile(outputFile,'[]', () => utils.exportJSON(data,outputFile, time));
 }
 
-module.exports = utils;
+export default utils;
 
 String.prototype.re = function(pattern){
   pattern = (typeof pattern ==='string') ? new RegExp(pattern) : pattern;

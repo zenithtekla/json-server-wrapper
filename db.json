@@ -1,8 +1,4 @@
 {
-    "headers": {
-        "Accept": "application/json, text/plain, */*",
-        "token": "AQIC5wM2LY4SfcxgJlbzdqId154xIqeSMyrJ0RrxgZuo6ag.*AAJTSQACMDIAAlNLABQtMTIwNjMzNDgzMjc3MDc4MzQ3NgACUzEAAjAx*"
-    },
     "logon": {
         "apiErrorModel": null,
         "success": true,
@@ -17,147 +13,217 @@
             "expiresIn": 60
         }
     },
-    "fruits": [
-        "cam",
-        "buoi",
-        "xoai",
-        "apple"
+    "Customers": [
+        {
+            "id": 0,
+            "first_name": "Nannie",
+            "last_name": "Patrick",
+            "phone": "591-459-4214"
+        },
+        {
+            "id": 1,
+            "first_name": "Sylvester",
+            "last_name": "Carmelo",
+            "phone": "103-017-6124"
+        },
+        {
+            "id": 2,
+            "first_name": "Hertha",
+            "last_name": "Beulah",
+            "phone": "595-392-6848"
+        },
+        {
+            "id": 3,
+            "first_name": "Karianne",
+            "last_name": "Jackson",
+            "phone": "512-579-4835"
+        },
+        {
+            "id": 4,
+            "first_name": "Glen",
+            "last_name": "Annie",
+            "phone": "986-185-9084"
+        }
     ],
-    "getAllLibs": {
-        "getAllLibs": {
-            "apiErrorModel": null,
-            "success": true,
-            "libsList": [
-                {
-                    "id": 1,
-                    "name": "SmartPortal",
-                    "provider": "Johnson team"
-                },
-                {
-                    "id": 2,
-                    "name": "ReactJS-Redux-ReactNative",
-                    "provider": "Facebook team"
-                },
-                {
-                    "id": 3,
-                    "name": "Angular2-Ionic2-Cordova",
-                    "provider": "Google team"
-                },
-                {
-                    "id": 4,
-                    "name": "Xamarin",
-                    "provider": "Microsoft cross-platform appDev team"
-                }
+    "Users": [
+        {
+            "_id": "95585c64-85da-4375-a18d-3d83a7a94fb7",
+            "Name": "Deion45",
+            "Email": "Deion45@gmail.com",
+            "FullName": "Cyril",
+            "Title": "Internal Quality Consultant",
+            "Company": "Marquardt, Stanton and Kohler",
+            "Groups": [
+                "78febae5-48b1-4c75-a86e-b178ca3be49c"
+            ]
+        },
+        {
+            "_id": "c3b55471-6170-4fcf-9a64-2081720cc07e",
+            "Name": "Sophie_McLaughlin",
+            "Email": "Sophie_McLaughlin@gmail.com",
+            "FullName": "Kimberly",
+            "Title": "Chief Mobility Associate",
+            "Company": "Heidenreich Group",
+            "Groups": [
+                "78febae5-48b1-4c75-a86e-b178ca3be49c"
+            ]
+        },
+        {
+            "_id": "144a8fea-1856-437f-9738-8420f5b9d859",
+            "Name": "Francesca_Reichel85",
+            "Email": "Francesca_Reichel85@gmail.com",
+            "FullName": "Ashleigh",
+            "Title": "Regional Response Engineer",
+            "Company": "Rath Group",
+            "Groups": [
+                "78febae5-48b1-4c75-a86e-b178ca3be49c"
             ]
         }
-    },
-    "users": [
-        "Pristine",
-        "Phuc",
-        "Kallio",
-        "Tran",
-        "Aubrey",
+    ],
+    "Groups": [
         {
-            "id": 0,
-            "name": "user0"
-        },
-        {
-            "id": 1,
-            "name": "user1"
-        },
-        {
-            "id": 2,
-            "name": "user2"
-        },
-        {
-            "id": 3,
-            "name": "user3"
-        },
-        {
-            "id": 4,
-            "name": "user4"
-        },
-        {
-            "id": 5,
-            "name": "user5"
-        },
-        {
-            "id": 6,
-            "name": "user6"
-        },
-        {
-            "id": 7,
-            "name": "user7"
-        },
-        {
-            "id": 8,
-            "name": "user8"
-        },
-        {
-            "id": 9,
-            "name": "user9"
-        },
-        {
-            "id": 10,
-            "name": "user10"
-        },
-        {
-            "id": 11,
-            "name": "user11"
+            "_id": "78febae5-48b1-4c75-a86e-b178ca3be49c",
+            "Name": "Administrator",
+            "Description": "Admin group can oversee everything",
+            "Role": 2,
+            "Users": [
+                "95585c64-85da-4375-a18d-3d83a7a94fb7",
+                "c3b55471-6170-4fcf-9a64-2081720cc07e",
+                "144a8fea-1856-437f-9738-8420f5b9d859"
+            ]
         }
     ],
-    "movies": [
+    "Emails": [
         {
-            "id": 1,
-            "title": "spider man"
+            "Subject": "Perferendis sint occaecati dolorem aut nisi.",
+            "Body": "Suscipit ut nihil architecto ipsum animi et rem qui. Sunt ut sed aut non accusantium aut earum praesentium. Quisquam molestiae nisi delectus laboriosam corrupti rem ullam. Quas ut qui praesentium modi nam qui eos accusamus provident.",
+            "ToRecipients": [
+                "Alexie.Prosacco38@hotmail.com",
+                "Magali_Bode33@yahoo.com",
+                "River.Marks@gmail.com"
+            ],
+            "Sender": {
+                "Id": "95585c64-85da-4375-a18d-3d83a7a94fb7",
+                "Email": "Deion45@gmail.com",
+                "Name": "Deion45",
+                "FullName": "Cyril",
+                "Title": "Internal Quality Consultant"
+            },
+            "SentDate": "2016-11-24T08:16:23.545Z"
         },
         {
-            "id": 2,
-            "title": "spider man2"
-        }
-    ],
-    "posts": [
-        {
-            "id": 1,
-            "title": "json-server",
-            "author": "typicode"
+            "Subject": "Qui est consequatur eum natus.",
+            "Body": "Nemo quia aut et optio unde accusantium nihil amet molestias. Ex magnam non sit.",
+            "ToRecipients": [
+                "Eve.MacGyver@yahoo.com",
+                "Raheem.Lueilwitz@yahoo.com",
+                "Rosendo.Zboncak13@hotmail.com",
+                "Roberta.Dickens72@gmail.com",
+                "Darby_Mohr18@yahoo.com",
+                "Lora64@yahoo.com",
+                "Blair67@yahoo.com",
+                "Arnoldo_Wilderman@gmail.com"
+            ],
+            "Sender": {
+                "Id": "95585c64-85da-4375-a18d-3d83a7a94fb7",
+                "Email": "Deion45@gmail.com",
+                "Name": "Deion45",
+                "FullName": "Cyril",
+                "Title": "Internal Quality Consultant"
+            },
+            "SentDate": "2016-10-25T23:36:47.559Z"
         },
         {
-            "id": 2,
-            "title": "fake",
-            "author": "Matthew Bergman & Marak Squires"
-        }
-    ],
-    "customers": [
-        {
-            "id": 0,
-            "first_name": "Newton",
-            "last_name": "Darion",
-            "phone": "687-188-2605"
+            "Subject": "Tenetur ut veniam asperiores dicta quia adipisci.",
+            "Body": "Corporis doloribus quia quas. Illum repellat non.",
+            "ToRecipients": [
+                "Elyssa_Leffler75@yahoo.com",
+                "Ada33@yahoo.com",
+                "Magdalena.Eichmann82@gmail.com",
+                "Crystal88@yahoo.com",
+                "Cruz_Lockman@hotmail.com"
+            ],
+            "Sender": {
+                "Id": "c3b55471-6170-4fcf-9a64-2081720cc07e",
+                "Email": "Sophie_McLaughlin@gmail.com",
+                "Name": "Sophie_McLaughlin",
+                "FullName": "Kimberly",
+                "Title": "Chief Mobility Associate"
+            },
+            "SentDate": "2017-03-13T08:58:35.244Z"
         },
         {
-            "id": 1,
-            "first_name": "Megane",
-            "last_name": "Herminio",
-            "phone": "459-607-5423"
+            "Subject": "Sed ipsum maiores id.",
+            "Body": "Accusantium dolorum sed itaque dolor provident. Voluptate aut eos consequatur libero ex quia eum. Assumenda ipsum enim eum consequatur fugiat fuga sequi pariatur iure.",
+            "ToRecipients": [
+                "Leopoldo_Pagac@gmail.com",
+                "Mertie.Corwin@gmail.com",
+                "Trace94@hotmail.com"
+            ],
+            "Sender": {
+                "Id": "c3b55471-6170-4fcf-9a64-2081720cc07e",
+                "Email": "Sophie_McLaughlin@gmail.com",
+                "Name": "Sophie_McLaughlin",
+                "FullName": "Kimberly",
+                "Title": "Chief Mobility Associate"
+            },
+            "SentDate": "2016-09-02T14:56:00.729Z"
         },
         {
-            "id": 2,
-            "first_name": "Nestor",
-            "last_name": "Angelita",
-            "phone": "464-654-0156"
+            "Subject": "Corporis voluptates libero magnam asperiores corrupti nihil ab officia harum.",
+            "Body": "Nobis illum inventore. Et dolorem a. Molestiae dolores dolorum rerum repudiandae architecto ullam.",
+            "ToRecipients": [
+                "Adeline.Zemlak@hotmail.com",
+                "Alexys_Stanton68@yahoo.com"
+            ],
+            "Sender": {
+                "Id": "c3b55471-6170-4fcf-9a64-2081720cc07e",
+                "Email": "Sophie_McLaughlin@gmail.com",
+                "Name": "Sophie_McLaughlin",
+                "FullName": "Kimberly",
+                "Title": "Chief Mobility Associate"
+            },
+            "SentDate": "2016-11-29T10:00:01.954Z"
         },
         {
-            "id": 3,
-            "first_name": "Justine",
-            "last_name": "Alisha",
-            "phone": "572-968-3916"
+            "Subject": "Quia fuga vel odio magni hic doloremque.",
+            "Body": "Qui ducimus qui sequi excepturi et adipisci expedita minus. Quisquam quam et porro.",
+            "ToRecipients": [
+                "Jessyca81@yahoo.com",
+                "Winifred_Cruickshank57@yahoo.com",
+                "Liam.Huels@hotmail.com",
+                "Newton39@yahoo.com",
+                "Brown_Auer84@hotmail.com",
+                "Alisha.Jakubowski@gmail.com",
+                "Cole21@yahoo.com",
+                "Sam_Lakin@yahoo.com"
+            ],
+            "Sender": {
+                "Id": "144a8fea-1856-437f-9738-8420f5b9d859",
+                "Email": "Francesca_Reichel85@gmail.com",
+                "Name": "Francesca_Reichel85",
+                "FullName": "Ashleigh",
+                "Title": "Regional Response Engineer"
+            },
+            "SentDate": "2017-03-15T15:57:38.863Z"
         },
         {
-            "id": 4,
-            "first_name": "Karley",
-            "last_name": "Winston",
-            "phone": "860-877-7850"
+            "Subject": "Veniam error officiis odio voluptatem enim.",
+            "Body": "Qui quo animi quis qui culpa ad molestias inventore. Odio quis occaecati.",
+            "ToRecipients": [
+                "Eva50@yahoo.com",
+                "Josianne.McClure1@hotmail.com",
+                "Rhiannon_Balistreri@yahoo.com",
+                "Ryann.Weimann22@hotmail.com"
+            ],
+            "Sender": {
+                "Id": "144a8fea-1856-437f-9738-8420f5b9d859",
+                "Email": "Francesca_Reichel85@gmail.com",
+                "Name": "Francesca_Reichel85",
+                "FullName": "Ashleigh",
+                "Title": "Regional Response Engineer"
+            },
+            "SentDate": "2016-04-26T23:29:14.348Z"
         }
     ]
 }
