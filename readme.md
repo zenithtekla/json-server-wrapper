@@ -1,3 +1,11 @@
+*EMAIL SYSTEM* data modeling
+
+See ./src/scripts/config/configuration.js for configuration.
+
+Review ./db.js - application runs at localhost:7000
+
+RESTFul ready.
+
 *FEATURE*
 
 - `json-server-wrapper` can be used to provide JSON RESTful API and mock back-end data dynamically and programmatically.

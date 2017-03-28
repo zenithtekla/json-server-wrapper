@@ -1,6 +1,8 @@
 import faker from 'faker';
 import utils from './config/assets/utils';
+import {numberOfUsers, numberOfEmails, numberOfChildComments, hasComment} from './src/scripts/config/configuration';
 import _ from 'lodash';
+
 const ownerGroupId = faker.random.uuid();
 const adminGroupId = faker.random.uuid();
 const devGroupId = faker.random.uuid();
@@ -43,17 +45,8 @@ module.exports = function(time) {
   *
   * TODOS:
   *   - ENSURE Users - EmailIds and CommentIds pertaining to them for ACCESSIBILITY & INBOX
-  *
+  *   - TOKEN, generating, Expiring, access control
   * */
-
-  /*
-  * CONFIGURATION
-  * */
-
-  const numberOfUsers = 10;
-  const numberOfEmails = 152;
-  const numberOfChildComments = _.random(0,3); // = number of comments = number of comments to comments
-  const hasComment = numberOfChildComments > 0;
 
   let headers = {
     Accept: "application/json, text/plain, */*",
