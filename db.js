@@ -41,6 +41,9 @@ module.exports = function(time) {
   *
   * Email is a thread containing Replies (Comments)
   *
+  * TODOS:
+  *   - ENSURE Users - EmailIds and CommentIds pertaining to them for ACCESSIBILITY & INBOX
+  *
   * */
 
   /*
