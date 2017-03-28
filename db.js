@@ -89,13 +89,35 @@ module.exports = function(time) {
   const numberOfUsers = 10;
   _.times(numberOfUsers, () => data.Users.push(generateUser(data.Groups)));
 
-  const generateEmail = function(int){
+  const generateEmail = function(int, counter){
     let _id = faker.random.uuid(),
-      ToRecipients = generateRecipients();
+      Subject = faker.lorem.sentence(),
+      ToRecipients = generateRecipients(),
+      Comments = [];
+
+    const numberOfChildComments = _.random(0,3);
+    const hasComment = numberOfChildComments > 0;
+    if(hasComment){
+      const SUBJECT = `RE: ${Subject}`;
+      let Comment1 = generateComment(_id, SUBJECT, ToRecipients);
+      Comments.push(Comment1);
+      if(numberOfChildComments>1){
+        let subj = 'RE:';
+        _.times(numberOfChildComments-1, () => Comments.push(generateComment(_id, subj+SUBJECT, generateRecipients(), Comment1.ParentId, Comment1.ParentSlug)))
+      }
+
+      let Comment2 = generateComment(_id, SUBJECT, ToRecipients);
+      Comments.push(Comment2);
+      if(numberOfChildComments>1){
+        let subj = 'RE:';
+        _.times(numberOfChildComments-1, () => Comments.push(generateComment(_id, subj+SUBJECT, generateRecipients(), Comment2.ParentId, Comment2.ParentSlug)))
+      }
+    }
 
     return {
       _id,
-      Subject: faker.lorem.sentence(),
+      counter,
+      Subject,
       Body: faker.lorem.sentences(),
       ToRecipients,
       Sender: {
@@ -106,22 +128,20 @@ module.exports = function(time) {
         Title: data.Users[int].Title
       },
       SentDate: faker.date.past(),
-      Comments: (_.random(0,3)>0) ? [generateComments(_id, ToRecipients)] : []
+      Comments
     }
   };
 
   const generateEmails = () => {
-    let Emails = [];
-    _.times(_.random(1,15), () => Emails.push(generateEmail(_.random(0,numberOfUsers-1))));
+    let Emails = [], counter = 0;
+    _.times(100, () => {
+      counter++;
+      Emails.push(generateEmail(_.random(0,numberOfUsers-1), counter))
+    });
     return Emails;
   };
 
-  data.Emails = [...generateEmails()];
-  /*// programmatically create 12 users
-  for (let i = 0; i < 12; i++) {
-      data.users.push({ id: i, name: 'user' + i })
-  }*/
-
+  data.Emails = [...generateEmails()]; // simulate Schema assignment in MongoDB
 
   function generateGroup (groupId, groupName, roleId) {
     return {
@@ -176,8 +196,8 @@ module.exports = function(time) {
     return groupSet;
   }
 
-  function generateComments(EmailId, previousRecipientsList, ParentId, ParentSlug) {
-    let FullSlug = faker.lorem.slug();
+  function generateComment(EmailId, EmailSubject, previousRecipientsList, ParentId, ParentSlug) {
+    let CurrentSlug = faker.lorem.slug();
     /* Sender should be part of the RegisteredUsers,
        If not, prompt to signup on login or automatically sign them up through Outlook emailing plugin and assign them a uuid.
        Thus, they should always be a registered user.
@@ -192,8 +212,11 @@ module.exports = function(time) {
     let comment = {
       DiscussionId: EmailId,
       ParentId: ParentId || faker.random.uuid(),
-      FullSlug,
-      Slug: _.initial(FullSlug.split('-')).join('-'),
+      CurrentSlug,
+      ParentSlug: ParentSlug || CurrentSlug,
+      FullSlug: ParentSlug ? `${ParentSlug}/${CurrentSlug}` : CurrentSlug,
+      Subject: EmailSubject || faker.lorem.sentence(),
+      Body: faker.lorem.sentences(), // Body of the Comment NOT entire everything
       Sender: data.RegisteredUsers[idx],
       ToRecipients:[generateRecipients()]
     };
@@ -206,7 +229,9 @@ module.exports = function(time) {
     let Recipients = [..._.sampleSize(_(data.RegisteredUsers).map('Email').value(), _.random(2,5))];
 
     // outsider user emails
-    _.times(_.random(1,5), ()=>Recipients.push(faker.internet.email()));
+    _.times(_.random(1,5), function () {
+      Recipients.push(faker.internet.email());
+    });
     return Recipients;
   }
 
