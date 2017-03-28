@@ -43,6 +43,15 @@ module.exports = function(time) {
   *
   * */
 
+  /*
+  * CONFIGURATION
+  * */
+
+  const numberOfUsers = 10;
+  const numberOfEmails = 152;
+  const numberOfChildComments = _.random(0,3); // = number of comments = number of comments to comments
+  const hasComment = numberOfChildComments > 0;
+
   let headers = {
     Accept: "application/json, text/plain, */*",
     token: "AQIC5wM2LY4SfcxgJlbzdqId154xIqeSMyrJ0RrxgZuo6ag.*AAJTSQACMDIAAlNLABQtMTIwNjMzNDgzMjc3MDc4MzQ3NgACUzEAAjAx*"
@@ -85,8 +94,7 @@ module.exports = function(time) {
     RegisteredUsers: [] // RegisteredUsers is a set of emails of users who had been assigned a unique user id in the Email System.
   };
 
-  // seed more users
-  const numberOfUsers = 10;
+  /* seed more users*/
   _.times(numberOfUsers, () => data.Users.push(generateUser(data.Groups)));
 
   const generateEmail = function(int, counter){
@@ -95,8 +103,6 @@ module.exports = function(time) {
       ToRecipients = generateRecipients(),
       Comments = [];
 
-    const numberOfChildComments = _.random(0,3);
-    const hasComment = numberOfChildComments > 0;
     if(hasComment){
       const SUBJECT = `RE: ${Subject}`;
       let Comment1 = generateComment(_id, SUBJECT, ToRecipients);
@@ -134,7 +140,7 @@ module.exports = function(time) {
 
   const generateEmails = () => {
     let Emails = [], counter = 0;
-    _.times(100, () => {
+    _.times(numberOfEmails, () => {
       counter++;
       Emails.push(generateEmail(_.random(0,numberOfUsers-1), counter))
     });
