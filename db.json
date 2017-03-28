@@ -13,217 +13,841 @@
             "expiresIn": 60
         }
     },
-    "Customers": [
-        {
-            "id": 0,
-            "first_name": "Nannie",
-            "last_name": "Patrick",
-            "phone": "591-459-4214"
-        },
-        {
-            "id": 1,
-            "first_name": "Sylvester",
-            "last_name": "Carmelo",
-            "phone": "103-017-6124"
-        },
-        {
-            "id": 2,
-            "first_name": "Hertha",
-            "last_name": "Beulah",
-            "phone": "595-392-6848"
-        },
-        {
-            "id": 3,
-            "first_name": "Karianne",
-            "last_name": "Jackson",
-            "phone": "512-579-4835"
-        },
-        {
-            "id": 4,
-            "first_name": "Glen",
-            "last_name": "Annie",
-            "phone": "986-185-9084"
-        }
-    ],
     "Users": [
         {
-            "_id": "95585c64-85da-4375-a18d-3d83a7a94fb7",
-            "Name": "Deion45",
-            "Email": "Deion45@gmail.com",
-            "FullName": "Cyril",
-            "Title": "Internal Quality Consultant",
-            "Company": "Marquardt, Stanton and Kohler",
+            "_id": "a87fa6d8-996d-4e29-83c4-be3f4c94759f",
+            "Name": "Jensen91",
+            "Email": "Jensen91@yahoo.com",
+            "FullName": "Emmanuel Kshlerin",
+            "Title": "Future Mobility Strategist",
+            "Company": "Rau, Kling and Abernathy",
             "Groups": [
-                "78febae5-48b1-4c75-a86e-b178ca3be49c"
+                {
+                    "_id": "8669cfd2-3d48-45dc-8cc0-58852710399f",
+                    "Name": "Developer",
+                    "Description": "Developer role in the Email System",
+                    "Role": 30,
+                    "Users": [
+                        {
+                            "_id": "a87fa6d8-996d-4e29-83c4-be3f4c94759f",
+                            "Name": "Jensen91",
+                            "Email": "Jensen91@yahoo.com",
+                            "FullName": "Emmanuel Kshlerin",
+                            "Title": "Future Mobility Strategist",
+                            "Company": "Rau, Kling and Abernathy"
+                        },
+                        {
+                            "_id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                            "Name": "Ellie36",
+                            "Email": "Ellie36@gmail.com",
+                            "FullName": "Mrs. Ellen Leannon",
+                            "Title": "Investor Integration Analyst",
+                            "Company": "Swift, Nienow and Abshire"
+                        },
+                        {
+                            "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                            "Name": "Josephine30",
+                            "Email": "Josephine30@yahoo.com",
+                            "FullName": "Dr. Brooks Monahan",
+                            "Title": "Senior Configuration Director",
+                            "Company": "Cormier - Metz"
+                        },
+                        {
+                            "_id": "2d2a5fe8-45dd-4c61-82cc-603c724df926",
+                            "Name": "Tyshawn29",
+                            "Email": "Tyshawn29@gmail.com",
+                            "FullName": "Nikko Bode",
+                            "Title": "Customer Accountability Architect",
+                            "Company": "Heathcote LLC"
+                        }
+                    ]
+                },
+                {
+                    "_id": "c66d4485-c168-4193-92a9-eb8db47aad1f",
+                    "Name": "Owner",
+                    "Description": "Owner role in the Email System",
+                    "Role": 10,
+                    "Users": [
+                        {
+                            "_id": "a87fa6d8-996d-4e29-83c4-be3f4c94759f",
+                            "Name": "Jensen91",
+                            "Email": "Jensen91@yahoo.com",
+                            "FullName": "Emmanuel Kshlerin",
+                            "Title": "Future Mobility Strategist",
+                            "Company": "Rau, Kling and Abernathy"
+                        },
+                        {
+                            "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                            "Name": "Josephine30",
+                            "Email": "Josephine30@yahoo.com",
+                            "FullName": "Dr. Brooks Monahan",
+                            "Title": "Senior Configuration Director",
+                            "Company": "Cormier - Metz"
+                        }
+                    ]
+                }
             ]
         },
         {
-            "_id": "c3b55471-6170-4fcf-9a64-2081720cc07e",
-            "Name": "Sophie_McLaughlin",
-            "Email": "Sophie_McLaughlin@gmail.com",
-            "FullName": "Kimberly",
-            "Title": "Chief Mobility Associate",
-            "Company": "Heidenreich Group",
+            "_id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+            "Name": "Ellie36",
+            "Email": "Ellie36@gmail.com",
+            "FullName": "Mrs. Ellen Leannon",
+            "Title": "Investor Integration Analyst",
+            "Company": "Swift, Nienow and Abshire",
             "Groups": [
-                "78febae5-48b1-4c75-a86e-b178ca3be49c"
+                {
+                    "_id": "25cc5209-9344-419b-b29e-42dc6765fac9",
+                    "Name": "Tech support",
+                    "Description": "Tech support role in the Email System",
+                    "Role": 40,
+                    "Users": [
+                        {
+                            "_id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                            "Name": "Ellie36",
+                            "Email": "Ellie36@gmail.com",
+                            "FullName": "Mrs. Ellen Leannon",
+                            "Title": "Investor Integration Analyst",
+                            "Company": "Swift, Nienow and Abshire"
+                        },
+                        {
+                            "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                            "Name": "Josephine30",
+                            "Email": "Josephine30@yahoo.com",
+                            "FullName": "Dr. Brooks Monahan",
+                            "Title": "Senior Configuration Director",
+                            "Company": "Cormier - Metz"
+                        },
+                        {
+                            "_id": "ff27fddb-de28-4116-88c4-7e2654c49878",
+                            "Name": "Rita84",
+                            "Email": "Rita84@yahoo.com",
+                            "FullName": "Nelda Mohr",
+                            "Title": "Central Usability Engineer",
+                            "Company": "Kirlin Group"
+                        },
+                        {
+                            "_id": "08c7543e-504b-4f57-bccf-753c253ce905",
+                            "Name": "Bell96",
+                            "Email": "Bell96@gmail.com",
+                            "FullName": "Alvis Vandervort",
+                            "Title": "District Metrics Analyst",
+                            "Company": "Weissnat and Sons"
+                        }
+                    ]
+                },
+                {
+                    "_id": "8669cfd2-3d48-45dc-8cc0-58852710399f",
+                    "Name": "Developer",
+                    "Description": "Developer role in the Email System",
+                    "Role": 30,
+                    "Users": [
+                        {
+                            "_id": "a87fa6d8-996d-4e29-83c4-be3f4c94759f",
+                            "Name": "Jensen91",
+                            "Email": "Jensen91@yahoo.com",
+                            "FullName": "Emmanuel Kshlerin",
+                            "Title": "Future Mobility Strategist",
+                            "Company": "Rau, Kling and Abernathy"
+                        },
+                        {
+                            "_id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                            "Name": "Ellie36",
+                            "Email": "Ellie36@gmail.com",
+                            "FullName": "Mrs. Ellen Leannon",
+                            "Title": "Investor Integration Analyst",
+                            "Company": "Swift, Nienow and Abshire"
+                        },
+                        {
+                            "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                            "Name": "Josephine30",
+                            "Email": "Josephine30@yahoo.com",
+                            "FullName": "Dr. Brooks Monahan",
+                            "Title": "Senior Configuration Director",
+                            "Company": "Cormier - Metz"
+                        },
+                        {
+                            "_id": "2d2a5fe8-45dd-4c61-82cc-603c724df926",
+                            "Name": "Tyshawn29",
+                            "Email": "Tyshawn29@gmail.com",
+                            "FullName": "Nikko Bode",
+                            "Title": "Customer Accountability Architect",
+                            "Company": "Heathcote LLC"
+                        }
+                    ]
+                }
             ]
         },
         {
-            "_id": "144a8fea-1856-437f-9738-8420f5b9d859",
-            "Name": "Francesca_Reichel85",
-            "Email": "Francesca_Reichel85@gmail.com",
-            "FullName": "Ashleigh",
-            "Title": "Regional Response Engineer",
-            "Company": "Rath Group",
+            "_id": "d1eea3f6-803d-4358-a640-36a0e8087fb0",
+            "Name": "Abigayle94",
+            "Email": "Abigayle94@yahoo.com",
+            "FullName": "Tiana Lindgren",
+            "Title": "Dynamic Data Facilitator",
+            "Company": "Jacobson and Sons",
+            "Groups": []
+        },
+        {
+            "_id": "d42b938f-b457-4905-85bb-3c923f9561ed",
+            "Name": "Kylie10",
+            "Email": "Kylie10@yahoo.com",
+            "FullName": "Bradly Collins",
+            "Title": "Direct Configuration Specialist",
+            "Company": "Kutch Inc",
             "Groups": [
-                "78febae5-48b1-4c75-a86e-b178ca3be49c"
+                {
+                    "_id": "048c87a6-4cee-4cfd-9acf-a441e095cd94",
+                    "Name": "Administrator",
+                    "Description": "Administrator role in the Email System",
+                    "Role": 20,
+                    "Users": [
+                        {
+                            "_id": "d42b938f-b457-4905-85bb-3c923f9561ed",
+                            "Name": "Kylie10",
+                            "Email": "Kylie10@yahoo.com",
+                            "FullName": "Bradly Collins",
+                            "Title": "Direct Configuration Specialist",
+                            "Company": "Kutch Inc"
+                        },
+                        {
+                            "_id": "ff27fddb-de28-4116-88c4-7e2654c49878",
+                            "Name": "Rita84",
+                            "Email": "Rita84@yahoo.com",
+                            "FullName": "Nelda Mohr",
+                            "Title": "Central Usability Engineer",
+                            "Company": "Kirlin Group"
+                        },
+                        {
+                            "_id": "2d2a5fe8-45dd-4c61-82cc-603c724df926",
+                            "Name": "Tyshawn29",
+                            "Email": "Tyshawn29@gmail.com",
+                            "FullName": "Nikko Bode",
+                            "Title": "Customer Accountability Architect",
+                            "Company": "Heathcote LLC"
+                        }
+                    ]
+                }
             ]
+        },
+        {
+            "_id": "d00b34b7-0be8-4bd4-b8f7-33ca22332992",
+            "Name": "Garth_Cummings6",
+            "Email": "Garth_Cummings6@yahoo.com",
+            "FullName": "Skye Wyman",
+            "Title": "Forward Assurance Technician",
+            "Company": "Mueller LLC",
+            "Groups": []
+        },
+        {
+            "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+            "Name": "Josephine30",
+            "Email": "Josephine30@yahoo.com",
+            "FullName": "Dr. Brooks Monahan",
+            "Title": "Senior Configuration Director",
+            "Company": "Cormier - Metz",
+            "Groups": [
+                {
+                    "_id": "25cc5209-9344-419b-b29e-42dc6765fac9",
+                    "Name": "Tech support",
+                    "Description": "Tech support role in the Email System",
+                    "Role": 40,
+                    "Users": [
+                        {
+                            "_id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                            "Name": "Ellie36",
+                            "Email": "Ellie36@gmail.com",
+                            "FullName": "Mrs. Ellen Leannon",
+                            "Title": "Investor Integration Analyst",
+                            "Company": "Swift, Nienow and Abshire"
+                        },
+                        {
+                            "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                            "Name": "Josephine30",
+                            "Email": "Josephine30@yahoo.com",
+                            "FullName": "Dr. Brooks Monahan",
+                            "Title": "Senior Configuration Director",
+                            "Company": "Cormier - Metz"
+                        },
+                        {
+                            "_id": "ff27fddb-de28-4116-88c4-7e2654c49878",
+                            "Name": "Rita84",
+                            "Email": "Rita84@yahoo.com",
+                            "FullName": "Nelda Mohr",
+                            "Title": "Central Usability Engineer",
+                            "Company": "Kirlin Group"
+                        },
+                        {
+                            "_id": "08c7543e-504b-4f57-bccf-753c253ce905",
+                            "Name": "Bell96",
+                            "Email": "Bell96@gmail.com",
+                            "FullName": "Alvis Vandervort",
+                            "Title": "District Metrics Analyst",
+                            "Company": "Weissnat and Sons"
+                        }
+                    ]
+                },
+                {
+                    "_id": "8669cfd2-3d48-45dc-8cc0-58852710399f",
+                    "Name": "Developer",
+                    "Description": "Developer role in the Email System",
+                    "Role": 30,
+                    "Users": [
+                        {
+                            "_id": "a87fa6d8-996d-4e29-83c4-be3f4c94759f",
+                            "Name": "Jensen91",
+                            "Email": "Jensen91@yahoo.com",
+                            "FullName": "Emmanuel Kshlerin",
+                            "Title": "Future Mobility Strategist",
+                            "Company": "Rau, Kling and Abernathy"
+                        },
+                        {
+                            "_id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                            "Name": "Ellie36",
+                            "Email": "Ellie36@gmail.com",
+                            "FullName": "Mrs. Ellen Leannon",
+                            "Title": "Investor Integration Analyst",
+                            "Company": "Swift, Nienow and Abshire"
+                        },
+                        {
+                            "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                            "Name": "Josephine30",
+                            "Email": "Josephine30@yahoo.com",
+                            "FullName": "Dr. Brooks Monahan",
+                            "Title": "Senior Configuration Director",
+                            "Company": "Cormier - Metz"
+                        },
+                        {
+                            "_id": "2d2a5fe8-45dd-4c61-82cc-603c724df926",
+                            "Name": "Tyshawn29",
+                            "Email": "Tyshawn29@gmail.com",
+                            "FullName": "Nikko Bode",
+                            "Title": "Customer Accountability Architect",
+                            "Company": "Heathcote LLC"
+                        }
+                    ]
+                },
+                {
+                    "_id": "c66d4485-c168-4193-92a9-eb8db47aad1f",
+                    "Name": "Owner",
+                    "Description": "Owner role in the Email System",
+                    "Role": 10,
+                    "Users": [
+                        {
+                            "_id": "a87fa6d8-996d-4e29-83c4-be3f4c94759f",
+                            "Name": "Jensen91",
+                            "Email": "Jensen91@yahoo.com",
+                            "FullName": "Emmanuel Kshlerin",
+                            "Title": "Future Mobility Strategist",
+                            "Company": "Rau, Kling and Abernathy"
+                        },
+                        {
+                            "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                            "Name": "Josephine30",
+                            "Email": "Josephine30@yahoo.com",
+                            "FullName": "Dr. Brooks Monahan",
+                            "Title": "Senior Configuration Director",
+                            "Company": "Cormier - Metz"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "ff27fddb-de28-4116-88c4-7e2654c49878",
+            "Name": "Rita84",
+            "Email": "Rita84@yahoo.com",
+            "FullName": "Nelda Mohr",
+            "Title": "Central Usability Engineer",
+            "Company": "Kirlin Group",
+            "Groups": [
+                {
+                    "_id": "048c87a6-4cee-4cfd-9acf-a441e095cd94",
+                    "Name": "Administrator",
+                    "Description": "Administrator role in the Email System",
+                    "Role": 20,
+                    "Users": [
+                        {
+                            "_id": "d42b938f-b457-4905-85bb-3c923f9561ed",
+                            "Name": "Kylie10",
+                            "Email": "Kylie10@yahoo.com",
+                            "FullName": "Bradly Collins",
+                            "Title": "Direct Configuration Specialist",
+                            "Company": "Kutch Inc"
+                        },
+                        {
+                            "_id": "ff27fddb-de28-4116-88c4-7e2654c49878",
+                            "Name": "Rita84",
+                            "Email": "Rita84@yahoo.com",
+                            "FullName": "Nelda Mohr",
+                            "Title": "Central Usability Engineer",
+                            "Company": "Kirlin Group"
+                        },
+                        {
+                            "_id": "2d2a5fe8-45dd-4c61-82cc-603c724df926",
+                            "Name": "Tyshawn29",
+                            "Email": "Tyshawn29@gmail.com",
+                            "FullName": "Nikko Bode",
+                            "Title": "Customer Accountability Architect",
+                            "Company": "Heathcote LLC"
+                        }
+                    ]
+                },
+                {
+                    "_id": "25cc5209-9344-419b-b29e-42dc6765fac9",
+                    "Name": "Tech support",
+                    "Description": "Tech support role in the Email System",
+                    "Role": 40,
+                    "Users": [
+                        {
+                            "_id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                            "Name": "Ellie36",
+                            "Email": "Ellie36@gmail.com",
+                            "FullName": "Mrs. Ellen Leannon",
+                            "Title": "Investor Integration Analyst",
+                            "Company": "Swift, Nienow and Abshire"
+                        },
+                        {
+                            "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                            "Name": "Josephine30",
+                            "Email": "Josephine30@yahoo.com",
+                            "FullName": "Dr. Brooks Monahan",
+                            "Title": "Senior Configuration Director",
+                            "Company": "Cormier - Metz"
+                        },
+                        {
+                            "_id": "ff27fddb-de28-4116-88c4-7e2654c49878",
+                            "Name": "Rita84",
+                            "Email": "Rita84@yahoo.com",
+                            "FullName": "Nelda Mohr",
+                            "Title": "Central Usability Engineer",
+                            "Company": "Kirlin Group"
+                        },
+                        {
+                            "_id": "08c7543e-504b-4f57-bccf-753c253ce905",
+                            "Name": "Bell96",
+                            "Email": "Bell96@gmail.com",
+                            "FullName": "Alvis Vandervort",
+                            "Title": "District Metrics Analyst",
+                            "Company": "Weissnat and Sons"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "2d2a5fe8-45dd-4c61-82cc-603c724df926",
+            "Name": "Tyshawn29",
+            "Email": "Tyshawn29@gmail.com",
+            "FullName": "Nikko Bode",
+            "Title": "Customer Accountability Architect",
+            "Company": "Heathcote LLC",
+            "Groups": [
+                {
+                    "_id": "048c87a6-4cee-4cfd-9acf-a441e095cd94",
+                    "Name": "Administrator",
+                    "Description": "Administrator role in the Email System",
+                    "Role": 20,
+                    "Users": [
+                        {
+                            "_id": "d42b938f-b457-4905-85bb-3c923f9561ed",
+                            "Name": "Kylie10",
+                            "Email": "Kylie10@yahoo.com",
+                            "FullName": "Bradly Collins",
+                            "Title": "Direct Configuration Specialist",
+                            "Company": "Kutch Inc"
+                        },
+                        {
+                            "_id": "ff27fddb-de28-4116-88c4-7e2654c49878",
+                            "Name": "Rita84",
+                            "Email": "Rita84@yahoo.com",
+                            "FullName": "Nelda Mohr",
+                            "Title": "Central Usability Engineer",
+                            "Company": "Kirlin Group"
+                        },
+                        {
+                            "_id": "2d2a5fe8-45dd-4c61-82cc-603c724df926",
+                            "Name": "Tyshawn29",
+                            "Email": "Tyshawn29@gmail.com",
+                            "FullName": "Nikko Bode",
+                            "Title": "Customer Accountability Architect",
+                            "Company": "Heathcote LLC"
+                        }
+                    ]
+                },
+                {
+                    "_id": "8669cfd2-3d48-45dc-8cc0-58852710399f",
+                    "Name": "Developer",
+                    "Description": "Developer role in the Email System",
+                    "Role": 30,
+                    "Users": [
+                        {
+                            "_id": "a87fa6d8-996d-4e29-83c4-be3f4c94759f",
+                            "Name": "Jensen91",
+                            "Email": "Jensen91@yahoo.com",
+                            "FullName": "Emmanuel Kshlerin",
+                            "Title": "Future Mobility Strategist",
+                            "Company": "Rau, Kling and Abernathy"
+                        },
+                        {
+                            "_id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                            "Name": "Ellie36",
+                            "Email": "Ellie36@gmail.com",
+                            "FullName": "Mrs. Ellen Leannon",
+                            "Title": "Investor Integration Analyst",
+                            "Company": "Swift, Nienow and Abshire"
+                        },
+                        {
+                            "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                            "Name": "Josephine30",
+                            "Email": "Josephine30@yahoo.com",
+                            "FullName": "Dr. Brooks Monahan",
+                            "Title": "Senior Configuration Director",
+                            "Company": "Cormier - Metz"
+                        },
+                        {
+                            "_id": "2d2a5fe8-45dd-4c61-82cc-603c724df926",
+                            "Name": "Tyshawn29",
+                            "Email": "Tyshawn29@gmail.com",
+                            "FullName": "Nikko Bode",
+                            "Title": "Customer Accountability Architect",
+                            "Company": "Heathcote LLC"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "08c7543e-504b-4f57-bccf-753c253ce905",
+            "Name": "Bell96",
+            "Email": "Bell96@gmail.com",
+            "FullName": "Alvis Vandervort",
+            "Title": "District Metrics Analyst",
+            "Company": "Weissnat and Sons",
+            "Groups": [
+                {
+                    "_id": "25cc5209-9344-419b-b29e-42dc6765fac9",
+                    "Name": "Tech support",
+                    "Description": "Tech support role in the Email System",
+                    "Role": 40,
+                    "Users": [
+                        {
+                            "_id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                            "Name": "Ellie36",
+                            "Email": "Ellie36@gmail.com",
+                            "FullName": "Mrs. Ellen Leannon",
+                            "Title": "Investor Integration Analyst",
+                            "Company": "Swift, Nienow and Abshire"
+                        },
+                        {
+                            "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                            "Name": "Josephine30",
+                            "Email": "Josephine30@yahoo.com",
+                            "FullName": "Dr. Brooks Monahan",
+                            "Title": "Senior Configuration Director",
+                            "Company": "Cormier - Metz"
+                        },
+                        {
+                            "_id": "ff27fddb-de28-4116-88c4-7e2654c49878",
+                            "Name": "Rita84",
+                            "Email": "Rita84@yahoo.com",
+                            "FullName": "Nelda Mohr",
+                            "Title": "Central Usability Engineer",
+                            "Company": "Kirlin Group"
+                        },
+                        {
+                            "_id": "08c7543e-504b-4f57-bccf-753c253ce905",
+                            "Name": "Bell96",
+                            "Email": "Bell96@gmail.com",
+                            "FullName": "Alvis Vandervort",
+                            "Title": "District Metrics Analyst",
+                            "Company": "Weissnat and Sons"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "_id": "9b611c49-899e-4a0b-882a-46e66289e31e",
+            "Name": "Dane_Cremin",
+            "Email": "Dane_Cremin@yahoo.com",
+            "FullName": "Matt Altenwerth",
+            "Title": "Dynamic Infrastructure Representative",
+            "Company": "Goodwin - Connelly",
+            "Groups": []
         }
     ],
     "Groups": [
         {
-            "_id": "78febae5-48b1-4c75-a86e-b178ca3be49c",
-            "Name": "Administrator",
-            "Description": "Admin group can oversee everything",
-            "Role": 2,
+            "_id": "c66d4485-c168-4193-92a9-eb8db47aad1f",
+            "Name": "Owner",
+            "Description": "Owner role in the Email System",
+            "Role": 10,
             "Users": [
-                "95585c64-85da-4375-a18d-3d83a7a94fb7",
-                "c3b55471-6170-4fcf-9a64-2081720cc07e",
-                "144a8fea-1856-437f-9738-8420f5b9d859"
+                {
+                    "_id": "a87fa6d8-996d-4e29-83c4-be3f4c94759f",
+                    "Name": "Jensen91",
+                    "Email": "Jensen91@yahoo.com",
+                    "FullName": "Emmanuel Kshlerin",
+                    "Title": "Future Mobility Strategist",
+                    "Company": "Rau, Kling and Abernathy"
+                },
+                {
+                    "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                    "Name": "Josephine30",
+                    "Email": "Josephine30@yahoo.com",
+                    "FullName": "Dr. Brooks Monahan",
+                    "Title": "Senior Configuration Director",
+                    "Company": "Cormier - Metz"
+                }
+            ]
+        },
+        {
+            "_id": "048c87a6-4cee-4cfd-9acf-a441e095cd94",
+            "Name": "Administrator",
+            "Description": "Administrator role in the Email System",
+            "Role": 20,
+            "Users": [
+                {
+                    "_id": "d42b938f-b457-4905-85bb-3c923f9561ed",
+                    "Name": "Kylie10",
+                    "Email": "Kylie10@yahoo.com",
+                    "FullName": "Bradly Collins",
+                    "Title": "Direct Configuration Specialist",
+                    "Company": "Kutch Inc"
+                },
+                {
+                    "_id": "ff27fddb-de28-4116-88c4-7e2654c49878",
+                    "Name": "Rita84",
+                    "Email": "Rita84@yahoo.com",
+                    "FullName": "Nelda Mohr",
+                    "Title": "Central Usability Engineer",
+                    "Company": "Kirlin Group"
+                },
+                {
+                    "_id": "2d2a5fe8-45dd-4c61-82cc-603c724df926",
+                    "Name": "Tyshawn29",
+                    "Email": "Tyshawn29@gmail.com",
+                    "FullName": "Nikko Bode",
+                    "Title": "Customer Accountability Architect",
+                    "Company": "Heathcote LLC"
+                }
+            ]
+        },
+        {
+            "_id": "8669cfd2-3d48-45dc-8cc0-58852710399f",
+            "Name": "Developer",
+            "Description": "Developer role in the Email System",
+            "Role": 30,
+            "Users": [
+                {
+                    "_id": "a87fa6d8-996d-4e29-83c4-be3f4c94759f",
+                    "Name": "Jensen91",
+                    "Email": "Jensen91@yahoo.com",
+                    "FullName": "Emmanuel Kshlerin",
+                    "Title": "Future Mobility Strategist",
+                    "Company": "Rau, Kling and Abernathy"
+                },
+                {
+                    "_id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                    "Name": "Ellie36",
+                    "Email": "Ellie36@gmail.com",
+                    "FullName": "Mrs. Ellen Leannon",
+                    "Title": "Investor Integration Analyst",
+                    "Company": "Swift, Nienow and Abshire"
+                },
+                {
+                    "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                    "Name": "Josephine30",
+                    "Email": "Josephine30@yahoo.com",
+                    "FullName": "Dr. Brooks Monahan",
+                    "Title": "Senior Configuration Director",
+                    "Company": "Cormier - Metz"
+                },
+                {
+                    "_id": "2d2a5fe8-45dd-4c61-82cc-603c724df926",
+                    "Name": "Tyshawn29",
+                    "Email": "Tyshawn29@gmail.com",
+                    "FullName": "Nikko Bode",
+                    "Title": "Customer Accountability Architect",
+                    "Company": "Heathcote LLC"
+                }
+            ]
+        },
+        {
+            "_id": "25cc5209-9344-419b-b29e-42dc6765fac9",
+            "Name": "Tech support",
+            "Description": "Tech support role in the Email System",
+            "Role": 40,
+            "Users": [
+                {
+                    "_id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                    "Name": "Ellie36",
+                    "Email": "Ellie36@gmail.com",
+                    "FullName": "Mrs. Ellen Leannon",
+                    "Title": "Investor Integration Analyst",
+                    "Company": "Swift, Nienow and Abshire"
+                },
+                {
+                    "_id": "f642bbff-17cc-421f-ab20-36d47601347d",
+                    "Name": "Josephine30",
+                    "Email": "Josephine30@yahoo.com",
+                    "FullName": "Dr. Brooks Monahan",
+                    "Title": "Senior Configuration Director",
+                    "Company": "Cormier - Metz"
+                },
+                {
+                    "_id": "ff27fddb-de28-4116-88c4-7e2654c49878",
+                    "Name": "Rita84",
+                    "Email": "Rita84@yahoo.com",
+                    "FullName": "Nelda Mohr",
+                    "Title": "Central Usability Engineer",
+                    "Company": "Kirlin Group"
+                },
+                {
+                    "_id": "08c7543e-504b-4f57-bccf-753c253ce905",
+                    "Name": "Bell96",
+                    "Email": "Bell96@gmail.com",
+                    "FullName": "Alvis Vandervort",
+                    "Title": "District Metrics Analyst",
+                    "Company": "Weissnat and Sons"
+                }
             ]
         }
     ],
     "Emails": [
         {
-            "Subject": "Perferendis sint occaecati dolorem aut nisi.",
-            "Body": "Suscipit ut nihil architecto ipsum animi et rem qui. Sunt ut sed aut non accusantium aut earum praesentium. Quisquam molestiae nisi delectus laboriosam corrupti rem ullam. Quas ut qui praesentium modi nam qui eos accusamus provident.",
+            "Subject": "At qui modi.",
+            "Body": "Non sunt molestiae at et est. Unde qui consequatur placeat quia sint qui ut in. Autem doloremque sunt fugit necessitatibus et voluptas sit alias. Natus harum cumque tempore.",
             "ToRecipients": [
-                "Alexie.Prosacco38@hotmail.com",
-                "Magali_Bode33@yahoo.com",
-                "River.Marks@gmail.com"
+                "Jace.Crona@yahoo.com",
+                "Yvonne.Hackett40@hotmail.com"
             ],
             "Sender": {
-                "Id": "95585c64-85da-4375-a18d-3d83a7a94fb7",
-                "Email": "Deion45@gmail.com",
-                "Name": "Deion45",
-                "FullName": "Cyril",
-                "Title": "Internal Quality Consultant"
+                "Id": "a87fa6d8-996d-4e29-83c4-be3f4c94759f",
+                "Email": "Jensen91@yahoo.com",
+                "Name": "Jensen91",
+                "FullName": "Emmanuel Kshlerin",
+                "Title": "Future Mobility Strategist"
             },
-            "SentDate": "2016-11-24T08:16:23.545Z"
+            "SentDate": "2017-01-26T05:17:54.014Z",
+            "Comments": []
         },
         {
-            "Subject": "Qui est consequatur eum natus.",
-            "Body": "Nemo quia aut et optio unde accusantium nihil amet molestias. Ex magnam non sit.",
+            "Subject": "Excepturi qui amet vel nihil et.",
+            "Body": "Dolorum est id. Ex eum voluptas maiores autem sed ut nulla non. Debitis ipsa magnam repellendus cupiditate quidem et quo. Eos culpa quo vel adipisci. Libero est exercitationem.",
             "ToRecipients": [
-                "Eve.MacGyver@yahoo.com",
-                "Raheem.Lueilwitz@yahoo.com",
-                "Rosendo.Zboncak13@hotmail.com",
-                "Roberta.Dickens72@gmail.com",
-                "Darby_Mohr18@yahoo.com",
-                "Lora64@yahoo.com",
-                "Blair67@yahoo.com",
-                "Arnoldo_Wilderman@gmail.com"
+                "Jaqueline29@yahoo.com"
             ],
             "Sender": {
-                "Id": "95585c64-85da-4375-a18d-3d83a7a94fb7",
-                "Email": "Deion45@gmail.com",
-                "Name": "Deion45",
-                "FullName": "Cyril",
-                "Title": "Internal Quality Consultant"
+                "Id": "a87fa6d8-996d-4e29-83c4-be3f4c94759f",
+                "Email": "Jensen91@yahoo.com",
+                "Name": "Jensen91",
+                "FullName": "Emmanuel Kshlerin",
+                "Title": "Future Mobility Strategist"
             },
-            "SentDate": "2016-10-25T23:36:47.559Z"
+            "SentDate": "2017-03-20T02:34:47.234Z",
+            "Comments": []
         },
         {
-            "Subject": "Tenetur ut veniam asperiores dicta quia adipisci.",
-            "Body": "Corporis doloribus quia quas. Illum repellat non.",
+            "Subject": "Vero dolor tenetur qui.",
+            "Body": "Doloribus occaecati veritatis nihil voluptatem doloribus dolor. Reiciendis alias distinctio sit perferendis inventore maxime dolorem velit. Consectetur laudantium aliquam repudiandae culpa autem nihil provident vel tempora. Qui cumque qui est distinctio facilis eum dolor culpa.",
             "ToRecipients": [
-                "Elyssa_Leffler75@yahoo.com",
-                "Ada33@yahoo.com",
-                "Magdalena.Eichmann82@gmail.com",
-                "Crystal88@yahoo.com",
-                "Cruz_Lockman@hotmail.com"
+                "Celestine44@yahoo.com",
+                "Esther_Thompson27@yahoo.com",
+                "Gregorio_Ritchie25@gmail.com",
+                "Demetris87@yahoo.com"
             ],
             "Sender": {
-                "Id": "c3b55471-6170-4fcf-9a64-2081720cc07e",
-                "Email": "Sophie_McLaughlin@gmail.com",
-                "Name": "Sophie_McLaughlin",
-                "FullName": "Kimberly",
-                "Title": "Chief Mobility Associate"
+                "Id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                "Email": "Ellie36@gmail.com",
+                "Name": "Ellie36",
+                "FullName": "Mrs. Ellen Leannon",
+                "Title": "Investor Integration Analyst"
             },
-            "SentDate": "2017-03-13T08:58:35.244Z"
+            "SentDate": "2016-08-06T01:22:14.188Z",
+            "Comments": []
         },
         {
-            "Subject": "Sed ipsum maiores id.",
-            "Body": "Accusantium dolorum sed itaque dolor provident. Voluptate aut eos consequatur libero ex quia eum. Assumenda ipsum enim eum consequatur fugiat fuga sequi pariatur iure.",
+            "Subject": "Fugit nisi eum eos est sed explicabo.",
+            "Body": "Non id fugit ut. Pariatur veritatis omnis et quam. Nihil quae enim asperiores fugit quia repellat qui eveniet. Et magnam deserunt.",
             "ToRecipients": [
-                "Leopoldo_Pagac@gmail.com",
-                "Mertie.Corwin@gmail.com",
-                "Trace94@hotmail.com"
+                "Brando31@hotmail.com",
+                "Annetta.Corkery@hotmail.com",
+                "Sienna29@hotmail.com",
+                "Isabel.Berge@hotmail.com",
+                "Claude_Romaguera95@hotmail.com",
+                "Ophelia90@gmail.com"
             ],
             "Sender": {
-                "Id": "c3b55471-6170-4fcf-9a64-2081720cc07e",
-                "Email": "Sophie_McLaughlin@gmail.com",
-                "Name": "Sophie_McLaughlin",
-                "FullName": "Kimberly",
-                "Title": "Chief Mobility Associate"
+                "Id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                "Email": "Ellie36@gmail.com",
+                "Name": "Ellie36",
+                "FullName": "Mrs. Ellen Leannon",
+                "Title": "Investor Integration Analyst"
             },
-            "SentDate": "2016-09-02T14:56:00.729Z"
+            "SentDate": "2017-03-02T01:54:29.599Z",
+            "Comments": []
         },
         {
-            "Subject": "Corporis voluptates libero magnam asperiores corrupti nihil ab officia harum.",
-            "Body": "Nobis illum inventore. Et dolorem a. Molestiae dolores dolorum rerum repudiandae architecto ullam.",
+            "Subject": "Autem aliquid recusandae ipsam porro provident minima veritatis.",
+            "Body": "Et ut dicta rerum ea aut occaecati perspiciatis ut. Molestiae facilis nihil corrupti tenetur quas unde et nam mollitia. Praesentium aut similique aperiam quas maxime. Veniam odit quia placeat impedit illum fugit voluptatum. Repellendus ipsum quia error explicabo aperiam nostrum expedita reprehenderit eaque. Neque aut corporis et.",
             "ToRecipients": [
-                "Adeline.Zemlak@hotmail.com",
-                "Alexys_Stanton68@yahoo.com"
+                "Kellen3@yahoo.com",
+                "Adolfo_Bogan@yahoo.com",
+                "Arvid.Doyle59@yahoo.com",
+                "Kari_McDermott@gmail.com",
+                "Adelia.Kiehn13@yahoo.com",
+                "Wayne_Rath@gmail.com",
+                "Floyd81@hotmail.com"
             ],
             "Sender": {
-                "Id": "c3b55471-6170-4fcf-9a64-2081720cc07e",
-                "Email": "Sophie_McLaughlin@gmail.com",
-                "Name": "Sophie_McLaughlin",
-                "FullName": "Kimberly",
-                "Title": "Chief Mobility Associate"
+                "Id": "800ef217-6cef-4ee8-affa-98a86b60def4",
+                "Email": "Ellie36@gmail.com",
+                "Name": "Ellie36",
+                "FullName": "Mrs. Ellen Leannon",
+                "Title": "Investor Integration Analyst"
             },
-            "SentDate": "2016-11-29T10:00:01.954Z"
+            "SentDate": "2016-04-21T03:37:25.556Z",
+            "Comments": []
         },
         {
-            "Subject": "Quia fuga vel odio magni hic doloremque.",
-            "Body": "Qui ducimus qui sequi excepturi et adipisci expedita minus. Quisquam quam et porro.",
+            "Subject": "Nihil possimus enim dicta.",
+            "Body": "Maxime et ut ipsum aliquid odit asperiores ut. Nulla similique neque odit id dicta ut. Non quasi aut voluptates. Temporibus consequatur optio animi est vel et earum saepe sed.",
             "ToRecipients": [
-                "Jessyca81@yahoo.com",
-                "Winifred_Cruickshank57@yahoo.com",
-                "Liam.Huels@hotmail.com",
-                "Newton39@yahoo.com",
-                "Brown_Auer84@hotmail.com",
-                "Alisha.Jakubowski@gmail.com",
-                "Cole21@yahoo.com",
-                "Sam_Lakin@yahoo.com"
+                "Frida_Frami@hotmail.com",
+                "Joe55@yahoo.com",
+                "Beau_Schamberger13@gmail.com",
+                "Winifred_Osinski53@yahoo.com",
+                "Darwin_Leannon@hotmail.com"
             ],
             "Sender": {
-                "Id": "144a8fea-1856-437f-9738-8420f5b9d859",
-                "Email": "Francesca_Reichel85@gmail.com",
-                "Name": "Francesca_Reichel85",
-                "FullName": "Ashleigh",
-                "Title": "Regional Response Engineer"
+                "Id": "d1eea3f6-803d-4358-a640-36a0e8087fb0",
+                "Email": "Abigayle94@yahoo.com",
+                "Name": "Abigayle94",
+                "FullName": "Tiana Lindgren",
+                "Title": "Dynamic Data Facilitator"
             },
-            "SentDate": "2017-03-15T15:57:38.863Z"
+            "SentDate": "2016-11-29T20:27:09.164Z",
+            "Comments": []
         },
         {
-            "Subject": "Veniam error officiis odio voluptatem enim.",
-            "Body": "Qui quo animi quis qui culpa ad molestias inventore. Odio quis occaecati.",
+            "Subject": "Corrupti tempora ut vero et.",
+            "Body": "Eos quas possimus laudantium voluptas qui explicabo. Dolores aut reprehenderit quisquam. Id possimus dolor rerum incidunt saepe eius. Qui fugiat eos. Libero accusamus voluptatibus sit dolore molestiae mollitia vel magni veritatis. Laborum natus aut sunt ipsum.",
             "ToRecipients": [
-                "Eva50@yahoo.com",
-                "Josianne.McClure1@hotmail.com",
-                "Rhiannon_Balistreri@yahoo.com",
-                "Ryann.Weimann22@hotmail.com"
+                "Emmanuelle.Sawayn44@yahoo.com",
+                "Willis.Bogan28@gmail.com",
+                "Patience_Berge23@hotmail.com",
+                "Shayne_Hegmann95@gmail.com"
             ],
             "Sender": {
-                "Id": "144a8fea-1856-437f-9738-8420f5b9d859",
-                "Email": "Francesca_Reichel85@gmail.com",
-                "Name": "Francesca_Reichel85",
-                "FullName": "Ashleigh",
-                "Title": "Regional Response Engineer"
+                "Id": "d1eea3f6-803d-4358-a640-36a0e8087fb0",
+                "Email": "Abigayle94@yahoo.com",
+                "Name": "Abigayle94",
+                "FullName": "Tiana Lindgren",
+                "Title": "Dynamic Data Facilitator"
             },
-            "SentDate": "2016-04-26T23:29:14.348Z"
+            "SentDate": "2016-12-21T01:41:55.419Z",
+            "Comments": []
         }
     ]
 }

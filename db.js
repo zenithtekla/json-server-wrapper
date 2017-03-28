@@ -1,13 +1,46 @@
-let faker = require('faker')
+import faker from 'faker';
 import utils from './config/assets/utils';
 import _ from 'lodash';
-const groupId = faker.random.uuid();
+const ownerGroupId = faker.random.uuid();
+const adminGroupId = faker.random.uuid();
+const devGroupId = faker.random.uuid();
+const techGroupId = faker.random.uuid();
 
 module.exports = function(time) {
   /*
-  * Same preset-Groups: Administrator, Stakeholder, ... can be created with no users, then provide UI to add users
-  * Similarly: User can be created without having a specified Group. Group can be added later.
-  * Emails with no Replies (Comments), Emails with Replies.
+  * GROUPS
+  * Same preset-Groups: Administrator, Developer, Tech Support,... can be created with no users, then provide UI to add/remove users to the groups.
+  *
+  * ACL:
+  *   Owner {RoleId: 1x}
+  *     can view, reply, edit, and delete all Emails including Comments.
+  *     can view, edit, add, and delete Groups members
+  *     can delete the Groups entirely
+  *
+  *   Administrator {RoleId: 2x}
+  *     can view, reply, edit, and delete all Emails including Comments.
+  *     can view, edit, add, and delete Groups members
+  *     can delete the Groups entirely
+  *
+  *   Developer {RoleId: 3x}
+  *     can view, reply, edit, and delete Comments.
+  *     can view, edit, add, and delete Groups members
+  *
+  *   Tech Support {RoleId: 4x}
+  *     can view, reply, edit and delete lastest 3 Comments.
+  *     can view Groups members
+  *
+  *   General Users - open to public, rather than locking down to system users - the general public does not require a Group and role
+  *     can view, reply, edit and delete last Comment.
+  *     can view Groups members.
+  *
+  * USERS
+  * User can be created without having a specified Group.
+  * User can participate many Groups
+  *
+  *
+  * Email is a thread containing Replies (Comments)
+  *
   * */
 
   let headers = {
@@ -25,7 +58,7 @@ module.exports = function(time) {
     "userId": "775b44ae-d59d-414c-82fe-a907debf6874",
     "name": "zetekla2",
     "session": {
-    "token": "AQIC5wM2LY4SfczBEfYBdZ8vIW6lqWsx9YWpRjw5ABR1qc8.*AAJTSQACMDIAAlNLABM1OTg1Mjk5Nzc0NDg3OTkyNjc4AAJTMQACMDE.*",
+      "token": "AQIC5wM2LY4SfczBEfYBdZ8vIW6lqWsx9YWpRjw5ABR1qc8.*AAJTSQACMDIAAlNLABM1OTg1Mjk5Nzc0NDg3OTkyNjc4AAJTMQACMDE.*",
       "expiresIn": 60
     }
   };
@@ -33,45 +66,28 @@ module.exports = function(time) {
   let data = {
     // headers: headers,
     logon: logon,
-    /*fruits: require('./src/json/food.json').fruits,
+    /*
+
+    // loading JSON and segregated programmable js files for data can be done as follow
+    fruits: require('./src/json/food.json').fruits,
     getAllLibs: require('./src/scripts/appstore/Libraries/getAllLibs'),
-    users: ['Pristine', 'Phuc', 'Kallio', 'Tran', 'Aubrey'],
-    movies: [{id:1, title: 'spider man'}, {id:2, title: 'spider man2'}],
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" },
-      { "id": 2, "title": "fake", "author": "Matthew Bergman & Marak Squires" }
-    ],*/
-    Customers: generateCustomers(),
-    Users: [generateUsers(), generateUsers(), generateUsers()]
+
+    */
+    Users: [],
+
+    // seed some groups
+    Groups: [
+      generateGroup(ownerGroupId, 'Owner', 10),
+      generateGroup(adminGroupId, 'Administrator', 20),
+      generateGroup(devGroupId, 'Developer', 30),
+      generateGroup(techGroupId,'Tech support', 40)
+    ]
   };
 
-   const generateGroup = function() {
-    return {
-      _id: groupId,
-      Name: 'Administrator',
-      Description: 'Admin group can oversee everything',
-      Role: 2, // owner role 1
-      Users: [data.Users[0]._id, data.Users[1]._id, data.Users[2]._id]
-    }
-  };
+  // seed more users
+  _.times(10, () => data.Users.push(generateUser(data.Groups)));
 
-   data.Groups = [generateGroup()];
-
-/*  new Schema({
-    Subject: { type: String, trim: true },
-    Body: { type: String, trim: true },
-    ToRecipients: [],
-    Sender: {
-      Id: User._id,
-      Email: User.Email,
-      Name: User.Name,
-      FullName: User.FullName,
-      Title: User.Title,
-    },
-    SentDate: Date,
-    Comments: [Comment]
-
-  });*/
+  // seed Recipients
   const generateRecipients = () => {
     let Recipients = [];
     _.times(_.random(1,8), ()=>Recipients.push(faker.internet.email()));
@@ -90,7 +106,8 @@ module.exports = function(time) {
         FullName: data.Users[int].FullName,
         Title: data.Users[int].Title
       },
-      SentDate: faker.date.past()
+      SentDate: faker.date.past(),
+      Comments: []
     }
   };
 
@@ -112,34 +129,50 @@ module.exports = function(time) {
   return utils.exportJSON(data, './db.json', time);
 };
 
-function generateUsers(){
-  let name = faker.internet.userName();
+function generateGroup (groupId, groupName, roleId) {
   return {
-    _id: faker.random.uuid(),
-    Name: name,
-    Email: `${name}@gmail.com`,
-    FullName: faker.name.firstName(),
-    Title: faker.name.jobTitle(),
-    Company: faker.company.companyName(),
-    Groups: [groupId]
+    _id: groupId,
+    Name: groupName,
+    Description: `${groupName} role in the Email System`,
+    Role: roleId, // owner role 1
+    Users: []
   }
 }
 
-function generateCustomers () {
-  let customers = []
+function generateUser(groups){
+  let Name = faker.internet.userName(),
+    _id = faker.random.uuid(),
+    FullName = faker.name.findName(),
+    Email = `${Name}@${faker.internet.email().split('@')[1]}`,
+    Title = faker.name.jobTitle(),
+    Company = faker.company.companyName();
 
-  for (let id = 0; id < 5; id++) {
-    let firstName   = faker.name.firstName()
-    let lastName    = faker.name.firstName()
-    let phoneNumber = faker.phone.phoneNumberFormat()
+  // assigning _id for new user
 
-    customers.push({
-      "id": id,
-      "first_name": firstName,
-      "last_name": lastName,
-      "phone": phoneNumber
-    })
+  return {
+    _id,
+    Name,
+    Email,
+    FullName,
+    Title,
+    Company,
+    Groups: addGroup(groups, {_id, Name, Email, FullName, Title, Company})
   }
+}
 
-  return customers;
+function addGroup(groups, userObj) {
+  let n = _.random(0,3); // maximum participation of 3 groups
+  if (n === 0) return [];
+
+  let groupSet = [], uniqueSet = [];
+  _.times(n, () => {
+    let m = _.random(0,3);
+    if(!_.includes(uniqueSet, m)){
+      uniqueSet.push(m);
+      groups[m].Users.push(userObj);
+      groupSet.push(groups[m]);
+    }
+  });
+
+  return groupSet;
 }
