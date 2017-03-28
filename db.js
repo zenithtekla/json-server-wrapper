@@ -81,24 +81,23 @@ module.exports = function(time) {
       generateGroup(adminGroupId, 'Administrator', 20),
       generateGroup(devGroupId, 'Developer', 30),
       generateGroup(techGroupId,'Tech support', 40)
-    ]
+    ],
+    RegisteredUsers: [] // RegisteredUsers is a set of emails of users who had been assigned a unique user id in the Email System.
   };
 
   // seed more users
-  _.times(10, () => data.Users.push(generateUser(data.Groups)));
-
-  // seed Recipients
-  const generateRecipients = () => {
-    let Recipients = [];
-    _.times(_.random(1,8), ()=>Recipients.push(faker.internet.email()));
-    return Recipients;
-  };
+  const numberOfUsers = 10;
+  _.times(numberOfUsers, () => data.Users.push(generateUser(data.Groups)));
 
   const generateEmail = function(int){
+    let _id = faker.random.uuid(),
+      ToRecipients = generateRecipients();
+
     return {
+      _id,
       Subject: faker.lorem.sentence(),
       Body: faker.lorem.sentences(),
-      ToRecipients: generateRecipients(),
+      ToRecipients,
       Sender: {
         Id: data.Users[int]._id,
         Email: data.Users[int].Email,
@@ -107,19 +106,109 @@ module.exports = function(time) {
         Title: data.Users[int].Title
       },
       SentDate: faker.date.past(),
-      Comments: []
+      Comments: (_.random(0,3)>0) ? [generateComments(_id, ToRecipients)] : []
     }
   };
 
-  data.Emails = [
-    generateEmail(0),generateEmail(0),
-    generateEmail(1),generateEmail(1), generateEmail(1),
-    generateEmail(2), generateEmail(2)
-  ];
+  const generateEmails = () => {
+    let Emails = [];
+    _.times(_.random(1,15), () => Emails.push(generateEmail(_.random(0,numberOfUsers-1))));
+    return Emails;
+  };
+
+  data.Emails = [...generateEmails()];
   /*// programmatically create 12 users
   for (let i = 0; i < 12; i++) {
       data.users.push({ id: i, name: 'user' + i })
   }*/
+
+
+  function generateGroup (groupId, groupName, roleId) {
+    return {
+      _id: groupId,
+      Name: groupName,
+      Description: `${groupName} role in the Email System`,
+      Role: roleId, // owner role 1
+      Users: []
+    }
+  }
+
+  function generateUser(groups){
+    let Name = faker.internet.userName(),
+      _id = faker.random.uuid(),
+      FullName = faker.name.findName(),
+      Email = `${Name}@${faker.internet.email().split('@')[1]}`,
+      Title = faker.name.jobTitle(),
+      Company = faker.company.companyName(),
+      Phone = faker.phone.phoneNumber();
+
+    if(!_(data.RegisteredUsers).map('Email').includes(Email))
+      data.RegisteredUsers.push({_id, Name, Email, FullName, Phone});
+
+    // assigning _id for new user
+
+    return {
+      _id,
+      Name,
+      Email,
+      FullName,
+      Title,
+      Company,
+      Phone,
+      Groups: [...addGroup(groups, {_id, Name, Email, FullName, Phone})]
+    }
+  }
+
+  function addGroup(groups, userObj) {
+    let n = _.random(0,3); // maximum participation of 3 groups
+    if (n === 0) return [];
+
+    let groupSet = [], uniqueSet = [];
+    _.times(n, () => {
+      let m = _.random(0,3);
+      if(!_.includes(uniqueSet, m)){
+        uniqueSet.push(m);
+        groups[m].Users.push(userObj);
+        groupSet.push(groups[m]);
+      }
+    });
+
+    return groupSet;
+  }
+
+  function generateComments(EmailId, previousRecipientsList, ParentId, ParentSlug) {
+    let FullSlug = faker.lorem.slug();
+    /* Sender should be part of the RegisteredUsers,
+       If not, prompt to signup on login or automatically sign them up through Outlook emailing plugin and assign them a uuid.
+       Thus, they should always be a registered user.
+     */
+    let sample, idx = -1;
+    do {
+      sample = _.sample(previousRecipientsList);
+      idx = _(data.RegisteredUsers).findIndex({Email: sample});
+    }
+    while (idx===-1);
+
+    let comment = {
+      DiscussionId: EmailId,
+      ParentId: ParentId || faker.random.uuid(),
+      FullSlug,
+      Slug: _.initial(FullSlug.split('-')).join('-'),
+      Sender: data.RegisteredUsers[idx],
+      ToRecipients:[generateRecipients()]
+    };
+    return comment;
+  }
+
+  // seed Recipients
+  function generateRecipients() {
+    // get some register users randomly
+    let Recipients = [..._.sampleSize(_(data.RegisteredUsers).map('Email').value(), _.random(2,5))];
+
+    // outsider user emails
+    _.times(_.random(1,5), ()=>Recipients.push(faker.internet.email()));
+    return Recipients;
+  }
 
   /*
   let moment          = require('moment')
@@ -129,50 +218,6 @@ module.exports = function(time) {
   return utils.exportJSON(data, './db.json', time);
 };
 
-function generateGroup (groupId, groupName, roleId) {
-  return {
-    _id: groupId,
-    Name: groupName,
-    Description: `${groupName} role in the Email System`,
-    Role: roleId, // owner role 1
-    Users: []
-  }
-}
 
-function generateUser(groups){
-  let Name = faker.internet.userName(),
-    _id = faker.random.uuid(),
-    FullName = faker.name.findName(),
-    Email = `${Name}@${faker.internet.email().split('@')[1]}`,
-    Title = faker.name.jobTitle(),
-    Company = faker.company.companyName();
 
-  // assigning _id for new user
 
-  return {
-    _id,
-    Name,
-    Email,
-    FullName,
-    Title,
-    Company,
-    Groups: addGroup(groups, {_id, Name, Email, FullName, Title, Company})
-  }
-}
-
-function addGroup(groups, userObj) {
-  let n = _.random(0,3); // maximum participation of 3 groups
-  if (n === 0) return [];
-
-  let groupSet = [], uniqueSet = [];
-  _.times(n, () => {
-    let m = _.random(0,3);
-    if(!_.includes(uniqueSet, m)){
-      uniqueSet.push(m);
-      groups[m].Users.push(userObj);
-      groupSet.push(groups[m]);
-    }
-  });
-
-  return groupSet;
-}
